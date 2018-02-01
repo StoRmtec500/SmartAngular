@@ -29,6 +29,7 @@ import { MouseDomObservablesComponent } from './demos/mouse-dom-observables/mous
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { KpiBarComponent } from './shared/kpi-bar/kpi-bar.component';
+import { DataStoreService } from './shared/data-store.service';
 
 registerLocaleData(localeDe)
 
@@ -61,11 +62,12 @@ registerLocaleData(localeDe)
     BsDatepickerModule.forRoot()
   ],
   providers: [
+    DataStoreService,
     VouchersService,
     MediaService,   
     {provide: LOCALE_ID, useValue: "de-DE"},  
     // {provide: HTTP_INTERCEPTORS, useClass: FirebaseInterceptor, multi: true},  
-    RouteGuard
+    RouteGuard, DataStoreService
   ],
   bootstrap: [AppComponent]
 })

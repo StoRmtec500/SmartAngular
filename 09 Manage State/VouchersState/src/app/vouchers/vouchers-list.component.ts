@@ -2,6 +2,7 @@ import { VouchersService } from './voucher.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Voucher } from '../shared/model/model';
 import { Component, OnInit } from '@angular/core';
+import { DataStoreService } from '../shared/data-store.service';
 
 
 @Component({
@@ -13,10 +14,10 @@ export class VouchersListComponent implements OnInit {
   
   vouchers: Voucher[];
   
-  constructor(private router: Router, private vs: VouchersService) {  }
+  constructor(private router: Router, private dataStore: DataStoreService, private vs: VouchersService) {  }
 
   ngOnInit() {   
-    this.vs.getVouchers().subscribe(data => this.vouchers = data)
+    this.dataStore.Vouchers.subscribe(data => this.vouchers = data)
   }
 
   showVoucher(id: number){
