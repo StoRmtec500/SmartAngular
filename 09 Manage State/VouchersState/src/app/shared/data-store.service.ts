@@ -6,19 +6,17 @@ import { Voucher } from "./index";
 
 @Injectable()
 export class DataStoreService {
-  private arrVs: Voucher[] = [];
+  private vouchersArray: Voucher[] = [];
   private vouchers: BehaviorSubject<Voucher[]> = new BehaviorSubject(
-    this.arrVs
+    this.vouchersArray
   );
 
   public Vouchers: Observable<Voucher[]> = this.vouchers.asObservable();
 
   constructor(private vs: VouchersService) {
     this.vs.getVouchers().subscribe(data => {
-      data.forEach(item => {
-        this.arrVs.push(item);
-        this.vouchers.next(this.arrVs);
-      });
+      this.vouchersArray = data;
+      this.vouchers.next(this.vouchersArray);
     });
 
     setTimeout(()=>{
@@ -51,8 +49,8 @@ export class DataStoreService {
           }
         ]
       }
-      this.arrVs.push(v);
-      this.vouchers.next(this.arrVs);
+      this.vouchersArray.push(v);
+      this.vouchers.next(this.vouchersArray);
     }, 10000)
   }
 }

@@ -16,9 +16,10 @@ export class KpiBarComponent implements OnInit {
 
   ngOnInit() {
     this.dataStore.Vouchers.subscribe((vouchers: Voucher[]) => {
-      this.runningSum = 0;
+      this.runningSum = 0;      
       vouchers.forEach(item=>{
-        this.runningSum += item.Amount;
+        console.log(`Adding ${item.Amount}€ from voucher with text '${item.Text}' to current Total ${this.runningSum} - New Total: ${item.Amount + this.runningSum}`)
+        this.runningSum += item.Amount;        
       })
     })
   }
