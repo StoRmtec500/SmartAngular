@@ -16,9 +16,9 @@ export class FormsBuilderComponent implements OnInit {
 
   ngOnInit() {
     this.personForm = this.fb.group({
-      personName: [this.person.name, Validators.required],
-      personAge: [this.person.age],
-      personGender: [this.person.gender]
+      name: [this.person.name, Validators.required],
+      age: [this.person.age],
+      gender: [this.person.gender]
     })
   }
 
