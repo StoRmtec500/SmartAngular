@@ -35,6 +35,7 @@ namespace Vouchers
             //services.AddDbContext<VouchersDBContext>(options => options.UseSqlServer(conStr));
             //Fix as of https://github.com/aspnet/EntityFramework/issues/5385#issuecomment-220435119
             services.AddSingleton(typeof(IConfigurationRoot), Configuration);
+            
             services.AddEntityFrameworkSqlServer()
                     .AddDbContext<VouchersDBContext>(options => options.UseSqlServer(conStr));
             services.AddScoped<IVouchersRepository, VouchersRepository>();
