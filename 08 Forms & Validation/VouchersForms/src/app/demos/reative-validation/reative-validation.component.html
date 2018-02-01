@@ -3,8 +3,7 @@
   <form [formGroup]="personForm" (ngSubmit)="savePerson(personForm.value)" novalidate>
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" placeholder="Enter name"
-       formControlName="pName" id="name" name="personName" >
+      <input type="text" class="form-control" placeholder="Enter name" formControlName="pName">
        <em *ngIf="personForm.get('pName').errors!= undefined && personForm.get('pName').errors['hugoNotAllowed']">
           The Name Hugo is not allowed
        </em>
@@ -17,16 +16,15 @@
     </div>
     <div class="form-group">
       <label for="age">Age</label>
-      <input type="number" class="form-control" placeholder="Enter age"
-       formControlName="pAge" id="age" name="personAge">
+      <input type="number" class="form-control" placeholder="Enter age" formControlName="pAge">
        <em *ngIf="personForm.get('pAge').valid && personForm.get('pAge').touched">
           We dont support Undeads - Pls a value smaller than 120
        </em>
     </div>
     <div class="form-group">
       <label>Gender</label><br/>
-      <input type="radio" value="male" id="gender" formControlName="pGender"> Male
-      <input type="radio" value="female" id="gender" formControlName="pGender"> Female
+      <input type="radio" value="male" formControlName="pGender"> Male
+      <input type="radio" value="female" formControlName="pGender"> Female
     </div>  
     <div>
       <button class="btn btn-primary" (click)="validateForm(personForm)" >Validate</button>

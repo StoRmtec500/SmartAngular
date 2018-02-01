@@ -3,7 +3,7 @@
   <form #personForm="ngForm" (ngSubmit)="savePerson(personForm)" role="form" novalidate>
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" placeholder="Enter name" id="name" 
+      <input type="text" class="form-control" placeholder="Enter name" 
         name="personName" [(ngModel)]="person.name" required minlength="4">
       <em *ngIf="personForm.controls['personName']?.invalid">
         Name is required (minimum 4 characters).
@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
       <label for="email">E-Mail</label>
-      <input type="text" class="form-control" placeholder="Enter E-Mail" id="email" 
+      <input type="text" class="form-control" placeholder="Enter E-Mail"  
         name="personMail" [(ngModel)]="person.mail" required email>
       <em *ngIf="personForm.controls['personMail']?.invalid">
         E-Mail is required and must be a valid E-Mail.
@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
       <label for="age">Age</label>
-      <input type="number" class="form-control" placeholder="Enter age" id="age" 
+      <input type="number" class="form-control" placeholder="Enter age" 
        name="personAge" [(ngModel)]="person.age" required min="0" max="120">
        <em *ngIf="personForm.controls['personAge']?.invalid">
         Age is required and must be between 0 and 120.
