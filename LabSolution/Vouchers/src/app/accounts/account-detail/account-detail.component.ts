@@ -9,7 +9,7 @@ import { ActivatedRoute, Params, Router } from "@angular/router";
   styleUrls: ["./account-detail.component.css"]
 })
 export class AccountDetailComponent implements OnInit {
-  account: BalanceAccount = { ID: null, Name: "", Expense: false };
+  account: BalanceAccount = { ID: 0, Name: "", Expense: false };
 
   constructor(
     private service: AccountsService,
@@ -27,7 +27,7 @@ export class AccountDetailComponent implements OnInit {
   }
 
   saveAcct() {
-    if (this.account.ID == null) {
+    if (this.account.ID == 0) {
       this.service.insertAccount(this.account);
     } else {
       this.service.updateAccount(this.account);

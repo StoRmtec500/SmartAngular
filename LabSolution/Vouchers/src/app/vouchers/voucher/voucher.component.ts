@@ -1,54 +1,60 @@
-import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
-import { VouchersService } from '../voucher.service';
-import { Voucher, VoucherDetail } from '../../shared/index';
+import { ActivatedRoute, Params, Router } from "@angular/router";
+import { Component, OnInit } from "@angular/core";
+import { VouchersService } from "../voucher.service";
+import { Voucher, VoucherDetail, BalanceAccount } from "../../shared/index";
 
 @Component({
-  selector: 'app-voucher',
-  templateUrl: './voucher.component.html',
-  styleUrls: ['./voucher.component.css']
+  selector: "app-voucher",
+  templateUrl: "./voucher.component.html",
+  styleUrls: ["./voucher.component.css"]
 })
 export class VoucherComponent implements OnInit {
-
-  voucher: Voucher = null;
+  voucher: Voucher = {
+    "ID": 0,
+    "Text": "",
+    "Date": new Date().toString() ,
+    "Amount": 650,
+    "Paid": false,
+    "Expense": false,
+    "Remark": false
+  };
+  accounts: BalanceAccount [] ;
   currentDetail: VoucherDetail;
 
-  constructor(private vs: VouchersService, private route: ActivatedRoute) {   }
+  constructor(private vs: VouchersService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
-    this.vs.getVoucher(this.route.snapshot.params['id']).then(data => {
-      this.voucher = data;
-      if (this.voucher.Details != null)
-      {
-        this.currentDetail = this.voucher.Details[0];
-      }
-    });
 
-    //Accessing Query Params
-    var readonly = this.route.snapshot.queryParams['readonly'];
-    console.log(`Page is readonly: ${readonly}` )
+    let id = this.route.snapshot.params["id"];
 
-    //Accessing Fragments
-    var section = this.route.snapshot.fragment;
-    if(section!=undefined) {
-      console.log(`Section to navigate to: ${section}` )
+    if(id!=0){
+      this.vs.getVoucher(id).subscribe(data => {
+        this.voucher = data.CurrentVoucher;
+        this.accounts = data.Accounts;
+        if (this.voucher.Details != null) {
+          this.currentDetail = this.voucher.Details[0];
+        }
+      });
+    }    
+  }
+
+  saveVoucher() {
+    if (this.voucher.ID == 0) {
+      this.vs.insertVoucher(this.voucher);
+    } else {
+      this.vs.updateVoucher(this.voucher);
     }
+    this.router.navigate(['/vouchers/']);
   }
 
-  saveVoucher(){
-    
-  }
-
-  selectDetail(detail){
+  selectDetail(detail) {
     this.currentDetail = detail;
   }
 
-  saveDetail(detail){
-    if(this.voucher.Details.includes(detail)){
-      
-    }
-    else{
-      this.voucher.Details.push(detail)
+  saveDetail(detail) {
+    if (this.voucher.Details.includes(detail)) {
+    } else {
+      this.voucher.Details.push(detail);
     }
   }
 }

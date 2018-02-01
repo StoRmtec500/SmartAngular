@@ -2,27 +2,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Voucher } from "../shared/index";
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class VouchersService {
-    constructor(private http: HttpClient) { }
+    constructor(private httpClient: HttpClient) { }
 
     vouchers = null;
 
-    getVouchers() : Promise<any> {
-        return this.http.get('/assets/vouchers.json').toPromise();          
+    getVouchers() : Observable<Voucher[]> {
+        return this.httpClient.get<Voucher[]>('http://localhost:5000/api/vouchers');          
     }
     
-    getVoucher(id: number) : Promise<any> {
-        return new Promise<Voucher>((resolve, reject)=>{
-            this.http.get('/assets/vouchers.json').toPromise()
-            .then((data: Voucher[])=>{
-                var v = data.filter((item)=>{
-                    return item.ID == id;
-                 })
-                 resolve(v[0]);
-            })
-            .catch(err=>reject(err));
-        })
+    getVoucher(id: number) : Observable<any> {
+        return this.httpClient.get<any>('http://localhost:5000/api/vouchers/getvm/' + id);
+      }
+
+    insertVoucher(voucher: Voucher) : void {                
+        this.httpClient.post<Voucher>('http://localhost:5000/api/vouchers', voucher)
+            .subscribe(()=>console.log(`voucher with id ${voucher.ID} inserted`), 
+            (err)=> console.log(err));            
+    }
+
+    updateVoucher(voucher: Voucher) : Observable<any> {
+        return this.httpClient.put<Voucher>('http://localhost:5000/api/vouchers', voucher);            
+    }
+
+    deleteVoucher(id: number) : Observable<any>  {        
+        return this.httpClient.delete("http://localhost:5000/api/vouchers/" + id);           
     }
 }

@@ -16,10 +16,14 @@ export class VouchersListComponent implements OnInit {
   constructor(private router: Router, private vs: VouchersService) {  }
 
   ngOnInit() {   
-    this.vs.getVouchers().then(data => this.vouchers = data)
+    this.vs.getVouchers().subscribe(data => this.vouchers = data)
   }
 
   showVoucher(id: number){
-    this.router.navigate(['/voucher/' + id]);
+    this.router.navigate(['/vouchers/' + id]);
+  }
+
+  deleteVoucher(v: Voucher){
+    this.vs.deleteVoucher(v.ID).subscribe(data => this.router.navigate(['/vouchers/']))
   }
 }
