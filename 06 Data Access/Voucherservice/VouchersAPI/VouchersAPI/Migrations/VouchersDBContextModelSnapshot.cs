@@ -25,6 +25,10 @@ namespace VouchersAPI.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<decimal>("Balance");
+
+                    b.Property<DateTime>("Created");
+
                     b.Property<bool>("Expense");
 
                     b.Property<string>("Name")

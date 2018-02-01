@@ -5,6 +5,7 @@ import { Observable } from "rxjs";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/filter";
 import { Voucher } from "../../shared/index";
+import { HttpResponse } from "@angular/common/http/src/response";
 
 
 @Component({
@@ -52,9 +53,10 @@ export class HttpClientsComponent implements OnInit {
         observe: "response"
       })
       .toPromise()
-      .then(data => {
-        console.log('Response using {observe: "response"}: ',data);
-        this.result = data;
+      .then((response : HttpResponse<any>) => {
+        console.log('Response using {observe: "response"}: ',response);
+        this.result = response;
+        let data = response.body;
       });
 
     var headers = new HttpHeaders();

@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Vouchers.Api
 {
+    [NoCache]
     [EnableCors("AllowAll")]
     [Route("api/[controller]")]
     public class VouchersController : Controller
@@ -22,6 +23,16 @@ namespace Vouchers.Api
 
         // http://localhost:PORT/api/vouchers        
         [HttpGet]
+        public IEnumerable<Voucher> Get()
+        {
+            var vouchers = ctx.Vouchers.OrderByDescending(v => v.Date).ToList();
+            return vouchers;
+        }
+
+        [HttpGet]
+        [Route("getvouchersalt}")]
+        [ProducesResponseType(typeof(List<Voucher>), 200)]
+        [ProducesResponseType(typeof(ApiResponse), 400)]
         public IEnumerable<Voucher> Get()
         {
             var vouchers = ctx.Vouchers.OrderByDescending(v => v.Date).ToList();

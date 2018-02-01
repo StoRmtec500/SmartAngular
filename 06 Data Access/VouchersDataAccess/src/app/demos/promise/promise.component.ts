@@ -28,6 +28,16 @@ export class PromiseComponent implements OnInit {
       });
   }
 
+  getVouchersTask() {
+    this.httpClient
+      .get("http://localhost:5000/api/vouchers/asyncArray")
+      .toPromise()
+      .then(data => {
+        this.result = data;
+        console.log("getVouchers()", this.result);
+      });
+  }
+
   getVoucher() {
     this.httpClient
       .get("http://localhost:5000/api/vouchers/2")

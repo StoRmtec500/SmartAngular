@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using VouchersNetCore.Common;
 
 namespace Vouchers.Api
 {
@@ -28,6 +30,24 @@ namespace Vouchers.Api
             return vouchers;
         }
 
+        // GET api/customers
+        [HttpGet]
+        [Route("asyncArray")]
+        [ProducesResponseType(typeof(Voucher[]), 200)]
+        [ProducesResponseType(typeof(ApiResponse), 400)]
+        public async Task<ActionResult> GetResponse()
+        {
+            try
+            {
+                var customers = await ctx.Vouchers.OrderByDescending(v => v.Date).ToArrayAsync();
+                return Ok(customers);
+            }
+            catch (Exception exp)
+            {
+                return BadRequest(new ApiResponse { Status = false });}
+        }
+           
+
         // http://localhost:PORT/vouchers/3
         [HttpGet("{id}")]
         public Voucher Get(int id)
@@ -35,6 +55,7 @@ namespace Vouchers.Api
             return id==0 ? new Voucher{Date = DateTime.Now} : ctx.Vouchers.Include(f=>f.Details).FirstOrDefault(v => v.ID == id);
         }
 
+        // http://localhost:PORT/api/vouchers -> Create
         [HttpPost]
         public void Post([FromBody]Voucher value)
         {
@@ -49,6 +70,7 @@ namespace Vouchers.Api
             ctx.SaveChanges();
         }
 
+        // http://localhost:PORT/api/vouchers -> Update
         [HttpPut()]
         public void Put([FromBody]Voucher value) //Classic .NET Core WebApi pattern: public void Put(int id, [FromBody]Voucher value)
         {
