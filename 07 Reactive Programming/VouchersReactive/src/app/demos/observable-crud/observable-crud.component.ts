@@ -29,9 +29,10 @@ export class ObservableCrudComponent implements OnInit {
   getVouchers() {
     this.httpClient
       .get<Voucher[]>("http://localhost:5000/api/vouchers")
-      .subscribe(data => {
-        this.result = data;
-      });
+      .subscribe(
+        data => {this.result = data;},
+        err => console.log(err),
+        () => {console.log("call complete")});
   }
 
   getVoucher() {

@@ -39,8 +39,8 @@ namespace Vouchers.Api
         {
             try
             {
-                var customers = await ctx.Vouchers.OrderByDescending(v => v.Date).ToArrayAsync();
-                return Ok(customers);
+                var vouchers = await ctx.Vouchers.OrderByDescending(v => v.Date).ToArrayAsync();
+                return Ok(vouchers);
             }
             catch (Exception exp)
             {

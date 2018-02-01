@@ -4,14 +4,17 @@ import {
   Input,
   EventEmitter,
   Output,
-  HostListener
+  HostListener,
+  ChangeDetectionStrategy
 } from "@angular/core";
 import { MediaItem } from "../../media-item";
+
 
 @Component({
   selector: "app-mediaitem",
   templateUrl: "./media-item.component.html",
-  styleUrls: ["./media-item.component.css"]
+  styleUrls: ["./media-item.component.css"],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MediaItemComponent implements OnInit {
   @Input() item: MediaItem;

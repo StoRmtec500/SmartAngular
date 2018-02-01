@@ -27,7 +27,7 @@ export class MouseDomObservablesComponent implements OnInit {
   useMouse() {
     let mouse = Observable.fromEvent(document, "mousemove");
 
-    mouse
+    this.mouseSubs = mouse
       .map((evt: MouseEvent) => {
         return { X: evt.clientX, Y: evt.clientY };
       })
