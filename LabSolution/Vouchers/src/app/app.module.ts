@@ -31,6 +31,7 @@ import { AdminComponent } from './admin/admin.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { AccountsService } from './accounts/account.service';
+import { AccountDetailComponent } from './accounts/account-detail/account-detail.component';
 registerLocaleData(localeDe)
 
 @NgModule({
@@ -39,6 +40,7 @@ registerLocaleData(localeDe)
     VouchersListComponent,
     AdminComponent,
     AccountsComponent,
+    AccountDetailComponent,
     VoucherComponent,
     VoucherDetailComponent,
     VoucherDetailsListComponent,

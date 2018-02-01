@@ -6,6 +6,7 @@
             <th>ID</th>
             <th>Name</th>
             <th>Expense</th>
+            <th><a [routerLink]="[ '/accounts', 0]">New Account</a></th>
             <th></th>
           </tr>
       </thead>
@@ -15,6 +16,7 @@
             <td>{{a.Name}}</td>
             <td><input type="checkbox" [ngModel]="a.Expense" disabled="true"></td>
             <td><a [routerLink]="[ '/accounts', a.ID ]">Details</a></td>
+            <td><a (click)="deleteAcccount(a)" >Delete</a></td>
           </tr>    
     </tbody>
     </table>

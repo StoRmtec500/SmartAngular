@@ -28,14 +28,14 @@ namespace Vouchers
         }
 
         [HttpPost]
-        public void Post([FromBody] BalanceAccount value)
+        public void Post([FromBody]BalanceAccount value)
         {
             ctx.BalanceAccounts.Add(value);
             ctx.SaveChanges();
         }
 
         [HttpPut]
-        public void Put([FromBody] BalanceAccount value)
+        public void Put([FromBody]BalanceAccount value)
         {
             ctx.BalanceAccounts.Attach(value);
             ctx.Entry(value).State = EntityState.Modified;

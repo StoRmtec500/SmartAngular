@@ -13,14 +13,18 @@ export class AccountsComponent implements OnInit {
 
   accounts: BalanceAccount[];
 
-  constructor(private router: Router, private as: AccountsService) { }
+  constructor(private router: Router, private service: AccountsService) { }
 
   ngOnInit() {
-    this.as.getAccounts().subscribe(data => this.accounts = data)
+    this.service.getAccounts().subscribe(data => this.accounts = data)
   }
 
   showAccount(id: number){
     this.router.navigate(['/accounts/' + id]);
   }
 
+  deleteAcccount(acct: BalanceAccount){
+    this.service.deleteAccount(acct);
+    this.router.navigate(['/accounts/']);
+  }
 }

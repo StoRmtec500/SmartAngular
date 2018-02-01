@@ -18,10 +18,14 @@ export class AccountsService {
   }
 
   insertAccount(acct: BalanceAccount): void {
-    this.httpClient.post("http://localhost:5000/api/accounts", acct);
+    this.httpClient.post("http://localhost:5000/api/accounts", acct).subscribe(()=>console.log("acct inserted"))
   }
 
   updateAccount(acct: BalanceAccount) {
-    this.httpClient.put("http://localhost:5000/api/accounts", acct);
+    this.httpClient.put("http://localhost:5000/api/accounts", acct).subscribe(()=>console.log("acct updated"))
+  }
+
+  deleteAccount(acct: BalanceAccount): void {
+    this.httpClient.delete("http://localhost:5000/api/accounts/" + acct.ID).subscribe(()=>console.log("acct deleted"))
   }
 }

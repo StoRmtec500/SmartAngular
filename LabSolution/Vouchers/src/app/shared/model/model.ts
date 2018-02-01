@@ -1,4 +1,3 @@
-import { BOOL_TYPE } from '@angular/compiler/src/output/output_ast';
 
 export class VoucherDetail {
     ID: number;
@@ -11,10 +10,9 @@ export class VoucherDetail {
 }
 
 export class BalanceAccount {
-    ID: number;
+    ID?: number;
     Name: string;
     Expense: boolean;
-    VoucherDetails: VoucherDetail[];
 }
 
 export class Voucher {
