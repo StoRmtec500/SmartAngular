@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class VouchersService {
     constructor(private httpClient: HttpClient) { }
 
-    vouchers = null;
+    private vouchers : Observable<Voucher[]>  = null;;  
 
     getVouchers() : Observable<Voucher[]> {
         return this.httpClient.get<Voucher[]>('http://localhost:5000/api/vouchers');          

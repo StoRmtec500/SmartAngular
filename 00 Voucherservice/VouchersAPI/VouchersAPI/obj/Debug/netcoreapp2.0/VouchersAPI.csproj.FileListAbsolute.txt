@@ -100,3 +100,15 @@ D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\
 D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
 D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.dll
 D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.pdb
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.deps.json
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.json
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.dev.json
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.dll
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.pdb
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.dll
+D:\SmartAngular\00 Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.pdb

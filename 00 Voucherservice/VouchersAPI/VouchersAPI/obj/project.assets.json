@@ -10821,15 +10821,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "D:\\SmartAngular\\06 Data Access\\Voucherservice\\VouchersAPI\\VouchersAPI\\VouchersAPI.csproj",
+      "projectUniqueName": "D:\\SmartAngular\\00 Voucherservice\\VouchersAPI\\VouchersAPI\\VouchersAPI.csproj",
       "projectName": "Vouchers",
-      "projectPath": "D:\\SmartAngular\\06 Data Access\\Voucherservice\\VouchersAPI\\VouchersAPI\\VouchersAPI.csproj",
+      "projectPath": "D:\\SmartAngular\\00 Voucherservice\\VouchersAPI\\VouchersAPI\\VouchersAPI.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\SmartAngular\\06 Data Access\\Voucherservice\\VouchersAPI\\VouchersAPI\\obj\\",
+      "outputPath": "D:\\SmartAngular\\00 Voucherservice\\VouchersAPI\\VouchersAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
