@@ -27,3 +27,7 @@
 .navbar-brand{
     padding: 0 !important;
 }
+
+.active{
+    color: red !important;
+}
