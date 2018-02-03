@@ -14,7 +14,9 @@ export class VoucherDetailsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(`received details ${this.details}`)
+    if(this.details!=undefined){
+      console.log(`received details ${this.details}`) 
+    }
   }
   
   selectDetail(d: VoucherDetail){
