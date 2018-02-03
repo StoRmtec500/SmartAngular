@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class VouchersListComponent implements OnInit {
   
   vouchers: Voucher[];
-  
+ 
   constructor(private router: Router, private vs: VouchersService) {  }
 
   ngOnInit() {   

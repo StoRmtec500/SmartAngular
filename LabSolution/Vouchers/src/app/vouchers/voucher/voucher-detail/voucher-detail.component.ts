@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { VoucherDetail } from '../../../shared/index';
+import { VoucherDetail, BalanceAccount } from '../../../shared/index';
 
 @Component({
   selector: 'app-voucher-detail',
@@ -8,6 +8,7 @@ import { VoucherDetail } from '../../../shared/index';
 })
 export class VoucherDetailComponent implements OnInit {
   @Input() detail : VoucherDetail;
+  @Input() accounts: BalanceAccount[];
   @Output() detailSaved : EventEmitter<VoucherDetail> = new EventEmitter();
   
   constructor() { }
@@ -16,8 +17,8 @@ export class VoucherDetailComponent implements OnInit {
 
   }
 
-  saveDetail(d: VoucherDetail){
-    this.detailSaved.emit(d);
+  saveDetail(){
+    this.detailSaved.emit(this.detail);
   }
 
 }
