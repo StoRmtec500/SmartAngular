@@ -1,8 +1,8 @@
 import { TwoWayPersonComponent } from './demos/two-way-person/two-way-person.component';
 import { FormsBuilderComponent } from './demos/forms-builder/forms-builder.component';
-import { ReativeValidationComponent } from './demos/reative-validation/reative-validation.component';
+import { ReativeValidationComponent } from './demos/reactive-validation/reactive-validation.component';
 import { TemplateValidationComponent } from './demos/template-validation/template-validation.component';
-import { ReativeFormsComponent } from './demos/reative-forms/reative-forms.component';
+import { ReativeFormsComponent } from './demos/reactive-forms/reactive-forms.component';
 import { TemplateDrivenComponent } from './demos/template-driven/template-driven.component';
 import { DemosComponent } from './demos/demos.component';
 import { VouchersListComponent } from './vouchers/vouchers-list.component';

@@ -9,9 +9,9 @@ import {
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: "app-reative-validation",
-  templateUrl: "./reative-validation.component.html",
-  styleUrls: ["./reative-validation.component.css"]
+  selector: "app-reactive-validation",
+  templateUrl: "./reactive-validation.component.html",
+  styleUrls: ["./reactive-validation.component.css"]
 })
 export class ReativeValidationComponent implements OnInit {
   personForm: FormGroup;
@@ -35,7 +35,7 @@ export class ReativeValidationComponent implements OnInit {
           this.validateNamesExist
         ]
       ],
-      age: [this.person.age, [Validators.min(18), Validators.min(99)]],
+      age: [this.person.age, [Validators.min(18), Validators.max(99)]],
       gender: [this.person.gender]
     });
   }
@@ -45,9 +45,14 @@ export class ReativeValidationComponent implements OnInit {
     console.log(formValues);
   }
 
-  validateName() {
-    return this.personForm.controls.name.valid ||
-      this.personForm.controls.name.untouched;
+  hasErrors() {
+    let errs =  this.personForm.controls.name.errors ;
+
+    if(errs){
+      console.log("Errors in Name field: ", this.personForm.controls.name.errors)
+    }
+
+    return true;    
   }
 
   validateNotHugo(control: FormControl): { [s: string]: boolean } {

@@ -41,22 +41,32 @@
 
 <div class="row section">
   <div class="col-md-6">
-    <h4>Form State</h4><br>
-    Form is dirty: {{personForm.dirty}}<br>
-    Form is pristine ('unberührt'): {{personForm.pristine}}<br><br>  
-    Form is valid: {{personForm.valid}}<br>
-    Form is invalid: {{personForm.invalid}}<br><br>
-    Form is touched: {{personForm.touched}}<br>
-    Form is untouched: {{personForm.untouched}}<br><br>
-    Form is submitted: {{personForm.submitted}}<br>
+    <h4>Control State - "Name" Field</h4><br>
+    Name Fld is dirty: {{personForm.controls['personName']?.dirty}}<br>
+    Name Fld is pristine: {{personForm.controls['personName']?.pristine}}<br>
+    Name Fld is valid: {{personForm.controls['personName']?.valid}}<br>
+    Name Fld is invalid: {{personForm.controls['personName']?.invalid}}<br>
+    Name Fld is touched: {{personForm.controls['personName']?.touched}}<br>
+    Name Fld is untouched: {{personForm.controls['personName']?.untouched}}<br>  
   </div>
   <div class="col-md-6">
-    <h4>Control State - i.e. "Name" Field</h4><br>
-    Name Fld is dirty: {{personForm.controls['personName']?.dirty}}<br>
-    Name Fld is pristine: {{personForm.controls['personName']?.pristine}}<br><br>
-    Name Fld is valid: {{personForm.controls['personName']?.valid}}<br>
-    Name Fld is invalid: {{personForm.controls['personName']?.invalid}}<br><br>
-    Name Fld is touched: {{personForm.controls['personName']?.touched}}<br>
-    Name Fld is untouched: {{personForm.controls['personName']?.untouched}}<br>      
+    <h4>Control State - "Age" Field</h4><br>
+    Age Fld is dirty: {{personForm.controls['personAge']?.dirty}}<br>
+    Age Fld is pristine: {{personForm.controls['personAge']?.pristine}}<br>
+    Age Fld is valid: {{personForm.controls['personAge']?.valid}}<br>
+    Age Fld is invalid: {{personForm.controls['personAge']?.invalid}}<br>
+    Age Fld is touched: {{personForm.controls['personAge']?.touched}}<br>
+    Age Fld is untouched: {{personForm.controls['personAge']?.untouched}}<br>   
   </div>
+</div>
+<div class="row section">
+  <div class="col-md-6">
+    <h4>Form State</h4><br>
+    Form is dirty: {{personForm.dirty}}<br>
+    Form is pristine ('unberührt'): {{personForm.pristine}}<br>  
+    Form is valid: {{personForm.valid}}<br>
+    Form is invalid: {{personForm.invalid}}<br>
+    Form is touched: {{personForm.touched}}<br>
+    Form is untouched: {{personForm.untouched}}<br>    
+  </div> 
 </div>
