@@ -28,8 +28,6 @@ import { MouseDomObservablesComponent } from './demos/mouse-dom-observables/mous
 
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
-import { KpiBarComponent } from './shared/kpi-bar/kpi-bar.component';
-
 registerLocaleData(localeDe)
 
 @NgModule({
@@ -48,8 +46,7 @@ registerLocaleData(localeDe)
     ObservableCrudComponent,
     MediaItemComponent,
     SimpleObservableComponent,
-    MouseDomObservablesComponent,
-    KpiBarComponent
+    MouseDomObservablesComponent
   ],
   imports: [
     FormsModule,
