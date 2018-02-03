@@ -27,3 +27,10 @@ export class Voucher {
     Readonly?: boolean;
     Details?: VoucherDetail[];
 }    
+
+export interface Person {
+    age: number
+    name: string;
+    gender: string;
+    married?: boolean
+}

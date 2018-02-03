@@ -26,10 +26,9 @@
         </div>
 
         <div class="col-md-4">
-            <input [ngModel]="detail.AccountID" size="40" type="text" placeholder="Text:" class="form-control input-sm" />
-            <!-- <select ng-model="VVM.EditDetail.Account.Name" id="ddAccount" class="form-control input-sm vdElement">
-                     <option ng-repeat="acct in VVM.Accounts" value="{{acct.Name}}"> {{acct.Name}}</option>
-            </select> -->
+            <select [(ngModel)]="detail.AccountID" class="form-control input-sm">
+                <option *ngFor="let a of accounts" [ngValue]="a.ID">{{a.Name}}</option>
+            </select>
         </div>
     </div>
 

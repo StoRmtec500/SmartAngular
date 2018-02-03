@@ -29,19 +29,19 @@
             <ul class="nav">
                 <li class="col-md-4">
                     <label class="radio-inline" for="rbExpense">
-                            <input type="radio" name="radios" ng-value="true" [ngModel]="voucher.Expense"/>
+                            <input type="radio" name="Expense" [value]=true [(ngModel)]="voucher.Expense"/>
                             Expense:
                         </label>
                 </li>
                 <li class="col-md-4">
                     <label class="radio-inline" for="rbIncome">
-                            <input type="radio" name="radios" ng-value="false" [ngModel]="voucher.Expense"/>
+                            <input type="radio" name="Expense" [value]=false [(ngModel)]="voucher.Expense"/>
                             Income:
                         </label>
                 </li>
                 <li class="col-md-4">
                     <label class="checkbox-inline" for="chkPaid">
-                            <input [ngModel]="voucher.Paid" type="checkbox" name="checkboxes" id="chkPaid" value="Paid"/>
+                            <input [(ngModel)]="voucher.Paid" type="checkbox" name="Paid" />
                             Paid:
                         </label>
                 </li>
@@ -54,7 +54,7 @@
     <app-voucher-details-list [details]="voucher==undefined?null:voucher.Details" (detailSelected)="selectDetail($event)"></app-voucher-details-list>
 
     <div *ngIf="currentDetail!=undefined">
-        <app-voucher-detail [detail]="currentDetail" (detailSaved)="saveDetail($event)"></app-voucher-detail>
+        <app-voucher-detail [detail]="currentDetail" [accounts]="accounts" (detailSaved)="saveDetail($event)"></app-voucher-detail>
     </div>
 
 </div>

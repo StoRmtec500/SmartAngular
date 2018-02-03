@@ -36,7 +36,7 @@
                 <td class="readonlyID">{{vd.ID}}</td>
                 <td> {{vd.Text}}</td>
                 <td class="detailsAmountItem">{{vd.Amount}}</td>
-                <td> {{vd.AccountID}}</td>
+                <td> {{ vd.Account!=null? vd.Account.Name : ""}}</td>
                 <td>
                     <a ng-click="deleteDetail(vd)" class="btn btn-xs btn-default">Delete</a>
                 </td>

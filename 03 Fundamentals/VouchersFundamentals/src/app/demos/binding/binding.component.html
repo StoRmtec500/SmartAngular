@@ -43,6 +43,13 @@
 </div>
 
 <div class="section">
+    <h4>Bindings Radio Buttons to Booleans</h4>
+    <input type="radio" [value]=true name="married" [(ngModel)]="selectedPerson.married"> Married
+    <input type="radio" [value]=false name="married" [(ngModel)]="selectedPerson.married"> Not Married
+    <br> {{selectedPerson.name}} is {{selectedPerson.married ? " married" : " not married"}}
+</div>
+
+<div class="section">
     <h4>Evtbinding with param</h4>
     <input type="radio" value="male" name="genderWithParam" [ngModel]="selectedPerson.gender" (change)="handleChange(selectedPerson)"> Male
     <input type="radio" value="female" name="genderWithParam" [ngModel]="selectedPerson.gender" (change)="handleChange(selectedPerson)"> Female

@@ -27,10 +27,10 @@ import { RouteGuard } from './route.guard.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap';
 import { AdminComponent } from './admin/admin.component';
+import { UnidirectionalVouchersComponent } from './demos/unidirectional-vouchers/unidirectional-vouchers.component';
 
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
-import { UnidirectionalVouchersComponent } from './demos/unidirectional-vouchers/unidirectional-vouchers.component';
 registerLocaleData(localeDe)
 
 @NgModule({

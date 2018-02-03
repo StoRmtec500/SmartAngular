@@ -1,7 +1,5 @@
-
-import { Person } from '../persons/persons.component';
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { ChangeDetectionStrategy } from '@angular/core/src/change_detection/constants';
+import { Component, Input, OnInit, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import { Person } from '../../../shared/index';
 
 @Component({
   selector: 'app-person-edit',

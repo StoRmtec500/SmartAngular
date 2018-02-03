@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Person } from "../../../shared/model/model"
 
 @Component({
   selector: 'app-persons',
@@ -28,10 +29,4 @@ export class PersonsComponent implements OnInit {
     console.log("saving to service");
     console.log(p);
   }
-}
-
-export class Person {
-  name: string;
-  gender: string;
-  age: number;
 }
