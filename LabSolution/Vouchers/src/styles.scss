@@ -26,16 +26,27 @@ body{
     background-color: $dark-brown;
 }
 
+$panelBackground: white;
+
+.panel {
+    background-color: $panelBackground;    
+    padding: 20px;
+}
+
+inner-panel{
+    padding: 20px 10px;
+}
+
 .cmdPanel{
     padding: 10px 10px;  
-    color: white;
+    color:$panelBackground;
     background-color: $dark-brown;
 }
 
 .cmdPanelSmall{
     padding: 5px;
     margin: 10px 0px;
-    color: white;
+    color: $panelBackground;
     background-color: $dark-brown;
 }
 
@@ -43,13 +54,8 @@ body{
     text-align: right;
 }
 
-.btn-xs {
-    padding: 1px 5px;
-    font-size: 12px;
-    line-height: 1.5;
-    border-radius: 3px;
-    background-color:  $occa;
-}
+$buttonCol: red;
+$buttonFontCol: white;
 
 .theme-green .bs-datepicker-head {
     background-color: $dark-brown;
