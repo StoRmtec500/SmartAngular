@@ -55,6 +55,16 @@ export class FunctionsComponent implements OnInit {
     buildFruitBucket("Beeren", "Himbeeren", "Brombeeren", "Goji Beeren");
   }
 
+  returnValue(){
+
+    function twoReturns() : string | string []{
+      return ["abc", "cde"]
+    }
+
+    console.log("result of function with two returns: ", twoReturns())
+
+  }
+
   arrowFunctions() {
     debugger;
 

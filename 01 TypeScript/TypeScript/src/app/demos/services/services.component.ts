@@ -1,10 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { Voucher } from "../../shared/model/model";
-import {
-  IClickCallback,
+import * as $ from "jquery";
+
+import {  
   VoucherService,
-  GenericService
+
 } from "./voucher.service";
+import { GenericService } from "./generic.service";
 
 @Component({
   selector: "app-services",
@@ -12,6 +14,7 @@ import {
   styleUrls: ["./services.component.css"]
 })
 export class ServicesComponent implements OnInit {
+  
   url = "/assets/vouchers.json";
 
   constructor() {}
@@ -28,7 +31,7 @@ export class ServicesComponent implements OnInit {
       success: function success(data: any) {
         console.log("Data received from jQuery: ", data);
       },
-      //shortcut of callback pattern
+      //shortcut of callback pattern - function removed
       error(err: any) {
         console.log("Error received from jQuery: ", err);
       }
@@ -36,7 +39,6 @@ export class ServicesComponent implements OnInit {
   }
 
   usingjQueryWithPromise() {
-   
     $.ajax({
       type: "GET",
       url: this.url,
@@ -44,11 +46,10 @@ export class ServicesComponent implements OnInit {
       dataType: "json"
     })
     .then(data => console.log("Data received from jQuery: ", data))
-    .catch(err =>  console.log("Error received from jQuery: ", err));
+    .catch(err => console.log("Error received from jQuery: ", err));
   }
 
   usingPromises() {
-
     function doAsyncTask(succeed: boolean): Promise<string> {
       return new Promise<string>((resolve, reject) => {
         setTimeout(() => {
@@ -78,7 +79,7 @@ export class ServicesComponent implements OnInit {
 
   usingFetchAwait() {
     async function getAllVouchers() {
-      let response = await fetch("./assets/vouchers.json");
+      let response = await fetch(this.url);
       let voucher = await response.json();
       console.log("Data received using fetch - await");
       console.log(voucher);
@@ -115,22 +116,18 @@ export class ServicesComponent implements OnInit {
 
     var service = new VoucherService();
     service.getVouchers().then((data: Voucher[]) => {
-      console.log("data from VoucherService");
-      console.log(data);
+      console.log("Data from VoucherService ", data);
     });
   }
 
   consumeGenericService() {
     debugger;
 
-    let res: GenericService<Voucher> = new GenericService<Voucher>(
-      "/api/vouchers/"
-    );
+    let serviceOfT: GenericService<Voucher> = new GenericService<Voucher>(this.url);
 
-    res.getItems().done((data: Voucher[]) => {
+    serviceOfT.getItems().then((data: Voucher[]) => {
       let vs: Voucher[] = data;
-      console.log("Data received from Ressource");
-      console.log(JSON.stringify(vs));
+      console.log("Data received from Generic Service: ", data);
     });
   }
 }

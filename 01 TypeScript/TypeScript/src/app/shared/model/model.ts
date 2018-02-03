@@ -27,3 +27,15 @@ export class Voucher {
     Readonly?: boolean;
     Details?: VoucherDetail[];
 }    
+
+export interface IObject{
+    ID: number;
+}
+
+export interface IClickCallback {
+    (e: Event): void;
+}
+
+export interface IAjaxCallback {
+    (data: any):void
+}
