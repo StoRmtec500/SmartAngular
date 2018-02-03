@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule, ViewChild } from '@angular/core';
 import { AdminComponent } from './admin/admin.component';
 import { RouteGuard } from './route.guard.service';
+import { UnidirectionalVouchersComponent } from './demos/unidirectional-vouchers/unidirectional-vouchers.component';
 
 const appRoutes: Routes = [
     { path: '',
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
         { path: 'formsbuilder', component: FormsBuilderComponent },
         { path: 'templatevalidation', component: TemplateValidationComponent },
         { path: 'reactivevalidation', component: ReativeValidationComponent },
-        { path: 'twoway', component: TwoWayPersonComponent }
+        { path: 'twoway', component: TwoWayPersonComponent },
+        { path: 'dataflow', component: UnidirectionalVouchersComponent }
       ]
     },
     { path: 'vouchers',
