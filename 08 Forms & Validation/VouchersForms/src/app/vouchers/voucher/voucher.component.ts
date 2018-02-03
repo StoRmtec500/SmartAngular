@@ -2,6 +2,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { VouchersService } from '../voucher.service';
 import { Voucher, VoucherDetail, BalanceAccount } from '../../shared/index';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-voucher',
@@ -22,7 +23,7 @@ export class VoucherComponent implements OnInit {
   accounts: BalanceAccount [] ;
   currentDetail: VoucherDetail;
 
-  constructor(private vs: VouchersService, private route: ActivatedRoute, private router: Router) {}
+  constructor(private vs: VouchersService, private route: ActivatedRoute, private router: Router, private fb: FormBuilder) {}
 
   ngOnInit() {
 
@@ -35,6 +36,9 @@ export class VoucherComponent implements OnInit {
         if (this.voucher.Details != null) {
           this.currentDetail = this.voucher.Details[0];
         }
+
+
+
       });
     }    
   }

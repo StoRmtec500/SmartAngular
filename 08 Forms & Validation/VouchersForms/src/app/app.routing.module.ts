@@ -1,8 +1,8 @@
 import { TwoWayPersonComponent } from './demos/two-way-person/two-way-person.component';
 import { FormsBuilderComponent } from './demos/forms-builder/forms-builder.component';
-import { ReativeValidationComponent } from './demos/reactive-validation/reactive-validation.component';
+import { ReactiveValidationComponent } from './demos/reactive-validation/reactive-validation.component';
 import { TemplateValidationComponent } from './demos/template-validation/template-validation.component';
-import { ReativeFormsComponent } from './demos/reactive-forms/reactive-forms.component';
+import { ReactiveFormsComponent } from './demos/reactive-forms/reactive-forms.component';
 import { TemplateDrivenComponent } from './demos/template-driven/template-driven.component';
 import { DemosComponent } from './demos/demos.component';
 import { VouchersListComponent } from './vouchers/vouchers-list.component';
@@ -19,10 +19,10 @@ const appRoutes: Routes = [
       component: DemosComponent,
       children: [
         { path: 'templatedriven', component: TemplateDrivenComponent },
-        { path: 'reactiveforms', component: ReativeFormsComponent },
+        { path: 'reactiveforms', component: ReactiveFormsComponent },
         { path: 'formsbuilder', component: FormsBuilderComponent },
         { path: 'templatevalidation', component: TemplateValidationComponent },
-        { path: 'reactivevalidation', component: ReativeValidationComponent },
+        { path: 'reactivevalidation', component: ReactiveValidationComponent },
         { path: 'twoway', component: TwoWayPersonComponent },
         { path: 'dataflow', component: UnidirectionalVouchersComponent }
       ]

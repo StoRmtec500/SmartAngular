@@ -14,7 +14,7 @@ import { ValidationErrors } from "@angular/forms/src/directives/validators";
   templateUrl: "./reactive-validation.component.html",
   styleUrls: ["./reactive-validation.component.css"]
 })
-export class ReativeValidationComponent implements OnInit {
+export class ReactiveValidationComponent implements OnInit {
   personForm: FormGroup;
   person: Person = {
     name: "Heinz",

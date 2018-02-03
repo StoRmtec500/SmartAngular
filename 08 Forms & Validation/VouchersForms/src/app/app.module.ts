@@ -13,9 +13,9 @@ import { VoucherComponent } from './vouchers/voucher/voucher.component';
 import { VouchersListComponent } from './vouchers/vouchers-list.component';
 import { VouchersService } from './vouchers/voucher.service';
 import { TemplateDrivenComponent } from './demos/template-driven/template-driven.component';
-import { ReativeFormsComponent } from './demos/reactive-forms/reactive-forms.component';
+import { ReactiveFormsComponent } from './demos/reactive-forms/reactive-forms.component';
 import { TemplateValidationComponent } from './demos/template-validation/template-validation.component';
-import { ReativeValidationComponent } from './demos/reactive-validation/reactive-validation.component';
+import { ReactiveValidationComponent } from './demos/reactive-validation/reactive-validation.component';
 import { FormsBuilderComponent } from './demos/forms-builder/forms-builder.component';
 import { TwoWayPersonComponent } from './demos/two-way-person/two-way-person.component';
 import { PersonsComponent } from './demos/two-way-person/persons/persons.component';
@@ -44,9 +44,9 @@ registerLocaleData(localeDe)
     VoucherDetailsListComponent,
     DemosComponent, 
     TemplateDrivenComponent,
-    ReativeFormsComponent,
+    ReactiveFormsComponent,
     TemplateValidationComponent,
-    ReativeValidationComponent,    
+    ReactiveValidationComponent,    
     ControlMessagesComponent,
     FormsBuilderComponent,
     TwoWayPersonComponent,

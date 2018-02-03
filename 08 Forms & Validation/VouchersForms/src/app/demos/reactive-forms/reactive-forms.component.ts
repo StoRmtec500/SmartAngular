@@ -7,7 +7,7 @@ import { Person } from "../../shared/index";
   templateUrl: './reactive-forms.component.html',
   styleUrls: ['./reactive-forms.component.css']
 })
-export class ReativeFormsComponent implements OnInit {
+export class ReactiveFormsComponent implements OnInit {
 
   personForm: FormGroup;
   personName: FormControl;
