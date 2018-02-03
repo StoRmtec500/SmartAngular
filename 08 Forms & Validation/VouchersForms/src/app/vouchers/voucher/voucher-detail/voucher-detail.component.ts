@@ -17,8 +17,8 @@ export class VoucherDetailComponent implements OnInit {
 
   }
 
-  saveDetail(d: VoucherDetail){
-    this.detailSaved.emit(d);
+  saveDetail(){
+    this.detailSaved.emit(this.detail);
   }
 
 }

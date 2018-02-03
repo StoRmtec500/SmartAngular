@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class VouchersListComponent implements OnInit {
   
   vouchers: Voucher[];
-  
+ 
   constructor(private router: Router, private vs: VouchersService) {  }
 
   ngOnInit() {   
@@ -21,5 +21,9 @@ export class VouchersListComponent implements OnInit {
 
   showVoucher(id: number){
     this.router.navigate(['/vouchers/' + id]);
+  }
+
+  deleteVoucher(v: Voucher){
+    this.vs.deleteVoucher(v.ID).subscribe(data => this.router.navigate(['/vouchers/']))
   }
 }

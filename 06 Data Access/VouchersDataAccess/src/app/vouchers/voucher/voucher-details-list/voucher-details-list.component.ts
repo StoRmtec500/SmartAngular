@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { VoucherDetail, Voucher, BalanceAccount } from '../../../shared/index';
+import { VoucherDetail, Voucher } from '../../../shared/index';
 
 @Component({
   selector: 'app-voucher-details-list',
@@ -8,24 +8,15 @@ import { VoucherDetail, Voucher, BalanceAccount } from '../../../shared/index';
 })
 export class VoucherDetailsListComponent implements OnInit {
   @Input() details : VoucherDetail[];
-  
   @Output() detailSelected : EventEmitter<VoucherDetail> = new EventEmitter();
-  @Output() detailAdded : EventEmitter<VoucherDetail> = new EventEmitter();
   @Output() detailDeleted : EventEmitter<VoucherDetail> = new EventEmitter();
   
   constructor() { }
 
-  ngOnInit() {
-    console.log(`received details ${this.details}`)
-  }  
+  ngOnInit() {  }
   
   selectDetail(d: VoucherDetail){
     this.detailSelected.emit(d);
-  }
-
-  addDetail(){
-    var nd = new VoucherDetail()    
-    this.detailAdded.emit(nd);
   }
 
   deleteDetail(d: VoucherDetail){

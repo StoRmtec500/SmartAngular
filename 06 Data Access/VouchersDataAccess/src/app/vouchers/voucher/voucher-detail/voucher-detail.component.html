@@ -13,11 +13,11 @@
 
 <div>
     <div class="row spacedRow">
-        <!-- <div class="col-md-1">
-            <input type="text" [ngModel]="detail.ID" readonly class="form-control input-sm" />
-        </div> -->
+        <div class="col-md-1">
+            <input type="text" [(ngModel)]="detail.ID" readonly class="form-control input-sm" />
+        </div>
 
-        <div class="col-md-6">
+        <div class="col-md-5">
             <input type="text" [(ngModel)]="detail.Text" size="40" placeholder="Text:" class="form-control input-sm" />
         </div>
 
@@ -26,8 +26,8 @@
         </div>
 
         <div class="col-md-4">
-            <select [(ngModel)]="detail.AccountID" class="form-control input-sm vdElement" >
-                <option *ngFor="let acct of accounts" [ngValue]="acct.ID" >{{acct.Name}}</option> 
+            <select [(ngModel)]="detail.AccountID" class="form-control input-sm">
+                <option *ngFor="let a of accounts" [ngValue]="a.ID">{{a.Name}}</option>
             </select>
         </div>
     </div>

@@ -8,13 +8,13 @@ import { VoucherDetail, BalanceAccount } from '../../../shared/index';
 })
 export class VoucherDetailComponent implements OnInit {
   @Input() detail : VoucherDetail;
-  @Input() accounts : BalanceAccount[];
+  @Input() accounts: BalanceAccount[];
   @Output() detailSaved : EventEmitter<VoucherDetail> = new EventEmitter();
   
   constructor() { }
 
   ngOnInit() {
-    console.log(this.detail)
+
   }
 
   saveDetail(){

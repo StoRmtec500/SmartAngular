@@ -1,63 +1,71 @@
-import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
-import { VouchersService } from '../voucher.service';
-import { Voucher, VoucherDetail, BalanceAccount } from '../../shared/index';
-import { UUID } from 'angular2-uuid';
+import { ActivatedRoute, Params, Router } from "@angular/router";
+import { Component, OnInit } from "@angular/core";
+import { VouchersService } from "../voucher.service";
+import { Voucher, VoucherDetail, BalanceAccount } from "../../shared/index";
+import { FormBuilder } from "@angular/forms";
 
 @Component({
-  selector: 'app-voucher',
-  templateUrl: './voucher.component.html',
-  styleUrls: ['./voucher.component.css']
+  selector: "app-voucher",
+  templateUrl: "./voucher.component.html",
+  styleUrls: ["./voucher.component.css"]
 })
 export class VoucherComponent implements OnInit {
-
-  voucher: Voucher = null;
-  accounts: BalanceAccount[] = null;
+  voucher: Voucher = {
+    ID: 0,
+    Text: "",
+    Date: new Date().toString(),
+    Amount: 0,
+    Paid: false,
+    Expense: false,
+    Remark: false
+  };
+  accounts: BalanceAccount[];
   currentDetail: VoucherDetail;
 
-  constructor(private vs: VouchersService, private route: ActivatedRoute) {   }
+  constructor(
+    private vs: VouchersService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    this.voucher = new Voucher();
+    let id = this.route.snapshot.params["id"];
 
-    this.vs.getVoucher(this.route.snapshot.params['id']).subscribe(data => {
-
-      if(data.CurrentVoucher!=null){
+    if (id != 0) {
+      this.vs.getVoucher(id).subscribe(data => {
         this.voucher = data.CurrentVoucher;
-      }     
-      this.accounts = data.Accounts;
-      
-      if (this.voucher.Details == undefined || this.voucher.Details==null)
-      {
-        this.voucher.Details = new Array<VoucherDetail>();
-        this.addDetail(new VoucherDetail())
-      }
-      this.currentDetail = this.voucher.Details[0];
-    });
-  }
-
-  saveVoucher(){
-    if(this.voucher.ID==undefined){
-      this.vs.insertVoucher(this.voucher);
-    }else{
-      this.vs.updateVoucher(this.voucher);
+        this.accounts = data.Accounts;
+        if (this.voucher.Details != null) {
+          this.currentDetail = this.voucher.Details[0];
+        }
+      });
     }
   }
 
-  selectDetail(detail:VoucherDetail){
+  saveVoucher() {
+    if (this.voucher.ID == 0) {
+      this.vs.insertVoucher(this.voucher);
+    } else {
+      this.vs.updateVoucher(this.voucher);
+    }
+    this.router.navigate(["/vouchers/"]);
+  }
+
+  selectDetail(detail) {
     this.currentDetail = detail;
   }
 
-  addDetail(detail:VoucherDetail){   
-    detail.TempId = UUID.UUID();
-    this.voucher.Details.push(detail);
-    this.currentDetail = detail;
-  }
+  saveDetail(detail : VoucherDetail) {
+    
+    if(detail.ID != 0){
+      detail.Account = this.accounts.find(a=>a.ID==detail.AccountID);
+    }
+    else{
+      if(this.voucher.Details == null){
+        this.voucher.Details = new Array<VoucherDetail>();
+      }
+      this.voucher.Details.push(detail);
+    }
 
-  saveDetail(detail:VoucherDetail){
-    let idx = detail.TempId!=null ? this.voucher.Details.findIndex(item=>item.TempId == detail.TempId) : this.voucher.Details.findIndex(item=>item.ID == detail.ID);
-    this.voucher.Details.splice(idx,1);       
-    detail.Account = this.accounts.find(item=>item.ID == detail.AccountID);
-    this.voucher.Details.push(detail)
   }
 }
