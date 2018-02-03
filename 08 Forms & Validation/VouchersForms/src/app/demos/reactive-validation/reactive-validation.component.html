@@ -10,9 +10,9 @@
         The Name Hugo is not allowed
       </em>
       <em *ngIf="personForm.controls['name'].errors!= undefined && personForm.controls['name'].errors['UserExists']">
-        This username is already taken
+        This username "Alexander" is already taken
       </em>
-      <em *ngIf="hasErrors()">
+      <em *ngIf="violatesMinLenght()">
         Name is required (minimum 4 characters).
       </em>
     </div>

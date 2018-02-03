@@ -7,6 +7,7 @@ import {
   FormBuilder
 } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
+import { ValidationErrors } from "@angular/forms/src/directives/validators";
 
 @Component({
   selector: "app-reactive-validation",
@@ -31,13 +32,17 @@ export class ReativeValidationComponent implements OnInit {
         [
           Validators.required,
           Validators.minLength(4),
-          this.validateNotHugo,
-          this.validateNamesExist
-        ]
+          this.validateNotHugo
+        ],
+        this.validateNamesExist.bind(this)
       ],
       age: [this.person.age, [Validators.min(18), Validators.max(99)]],
       gender: [this.person.gender]
     });
+
+    this.personForm.valueChanges.subscribe(vals =>{
+      console.log("changes happening @form: ", vals)
+    })
   }
 
   savePerson(formValues) {
@@ -45,14 +50,17 @@ export class ReativeValidationComponent implements OnInit {
     console.log(formValues);
   }
 
-  hasErrors() {
-    let errs =  this.personForm.controls.name.errors ;
+  violatesMinLenght() {
+    let result = false;
+    let errs : ValidationErrors =  this.personForm.controls.name.errors ;
 
-    if(errs){
-      console.log("Errors in Name field: ", this.personForm.controls.name.errors)
+    if(errs!=null){
+      console.log("Errors in Name field: ", errs)
+      if(errs["minlength"]){
+        result = true;
+      }
     }
-
-    return true;    
+    return result;
   }
 
   validateNotHugo(control: FormControl): { [s: string]: boolean } {
@@ -78,6 +86,6 @@ export class ReativeValidationComponent implements OnInit {
 
   validateForm(form) {
     form.updateValueAndValidity();
-    form.controls["pName"].updateValueAndValidity();
+    form.controls["name"].updateValueAndValidity();
   }
 }
