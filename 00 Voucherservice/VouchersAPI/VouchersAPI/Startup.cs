@@ -4,6 +4,7 @@ using JSNLog;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,32 +26,54 @@ namespace Vouchers
 
         public void ConfigureServices(IServiceCollection services)
         {
+            //Config
             var cfgBuilder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json");
-            IConfigurationRoot Configuration = cfgBuilder.Build();
-            services.Configure<VouchersConfig>(Configuration);
+            IConfigurationRoot configuration = cfgBuilder.Build();
+            services.Configure<VouchersConfig>(configuration);
+            services.AddSingleton(typeof(IConfigurationRoot), configuration);
+            string conStr = configuration["ConnectionStrings:SQLServerDBConnection"];
 
-            string conStr = Configuration["ConnectionStrings:SQLServerDBConnection"];
-            //services.AddDbContext<VouchersDBContext>(options => options.UseSqlServer(conStr));
-            //Fix as of https://github.com/aspnet/EntityFramework/issues/5385#issuecomment-220435119
-            services.AddSingleton(typeof(IConfigurationRoot), Configuration);
-            
+            //EF
             services.AddEntityFrameworkSqlServer()
                     .AddDbContext<VouchersDBContext>(options => options.UseSqlServer(conStr));
             services.AddScoped<IVouchersRepository, VouchersRepository>();
-            //services.AddSingleton<IVouchersRepository, VouchersRepository>();
+
+            //Identity
+            services.AddIdentity<VoucherUser, VoucherRole>()
+                .AddEntityFrameworkStores<VouchersDBContext>()
+                .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 0;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequiredUniqueChars = 1;
+
+                // Lockout settings
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
+                options.Lockout.MaxFailedAccessAttempts = 10;
+                options.Lockout.AllowedForNewUsers = true;
+
+                // User settings
+                options.User.RequireUniqueEmail = true;
+            });
 
 
+            //CORS
             var corsBuilder = new CorsPolicyBuilder();
             corsBuilder.AllowAnyHeader();
             corsBuilder.AllowAnyMethod();
-            corsBuilder.AllowAnyOrigin(); // For anyone access.
-            //corsBuilder.WithOrigins("http://localhost:56573"); // for a specific url. Don't add a forward slash on the end!
+            corsBuilder.AllowAnyOrigin();
+            // For specific URL 
+            // corsBuilder.WithOrigins("http://localhost:4200")
             corsBuilder.AllowCredentials();
             
-
-            //https://stackoverflow.com/questions/40043097/cors-in-net-core
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
@@ -60,6 +83,7 @@ namespace Vouchers
                         .AllowCredentials());
             });
 
+            //Serialization Options
             services.AddMvc().AddJsonOptions(ser =>
             {
                 ser.SerializerSettings.ContractResolver =
@@ -106,6 +130,9 @@ namespace Vouchers
             }
 
             app.UseCors("AllowAll");
+
+            //app.UseAuthentication();
+
             app.UseMvcWithDefaultRoute();
         }
     }

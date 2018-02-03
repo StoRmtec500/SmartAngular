@@ -12,8 +12,7 @@ namespace Vouchers
         private VouchersConfig config;
 
         public VouchersDBContext(DbContextOptions<VouchersDBContext> options) : base(options)
-        {
-        }
+        {}
 
         public DbSet<Voucher> Vouchers { get; set; }
         public DbSet<VoucherDetail> VoucherDetails { get; set; }
