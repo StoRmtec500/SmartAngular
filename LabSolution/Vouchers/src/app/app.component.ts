@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UrlSegment } from '@angular/router/src/url_tree';
-import { RouterEvent, NavigationEnd } from '@angular/router';
+import { RouterEvent, NavigationEnd, Route } from '@angular/router';
 
 
 @Component({
@@ -11,20 +10,23 @@ import { RouterEvent, NavigationEnd } from '@angular/router';
 })
 export class AppComponent implements OnInit {
 
+  children: string [];
   isRoot: boolean;
 
-  constructor(private router: Router){
-    
+  constructor(private router: Router, private route: ActivatedRoute){
+     
   }
 
   ngOnInit() {  
-    this.subsRouteChange();
+    this.evalIsRootOrChild();
    };
 
-  subsRouteChange(){
+  evalIsRootOrChild(){
+    this.children = this.router.config[0].children.map((item: Route)=>{return item.path});
     this.router.events.subscribe((evt:RouterEvent) => {
       if(evt.url!=undefined){
-        this.isRoot = evt.url == "/";
+        let isChildRoute  = this.children.find(item=>evt.url.includes(item)) != undefined
+        this.isRoot = evt.url == "/" || isChildRoute ? true: false;
       }
   })
   }

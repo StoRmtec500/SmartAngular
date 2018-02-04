@@ -29,7 +29,7 @@ export class TypesComponent implements OnInit {
 
     numbers[0] = 1;
     //numbers.push("two"); // compile-time error
-    
+
     let notSure: any = 4;
     notSure = "maybe a string instead";
     notSure = false; // okay, definitely a boolean
@@ -103,7 +103,8 @@ export class TypesComponent implements OnInit {
       //same as above - modern js
       ct = 0;
       for (var char of ts) {
-        if (characters.includes(char)) {  // like C# contains
+        if (characters.includes(char)) {
+          // like C# contains
           ct++;
         }
       }
@@ -121,7 +122,7 @@ export class TypesComponent implements OnInit {
 
     function handleClick(): void {
       var g = "I don't return anything.";
-      console.log(g);      
+      console.log(g);
     }
 
     //let nonsens: void = 10; //Conversion error
@@ -141,7 +142,7 @@ export class TypesComponent implements OnInit {
       ok = 6
     }
 
-    let isHappy : Happyness = Happyness.happy;
+    let isHappy: Happyness = Happyness.happy;
 
     enum VoucherStatus {
       draft,
@@ -156,33 +157,34 @@ export class TypesComponent implements OnInit {
     //status = "on the way"; // compile-time error
 
     if (status === VoucherStatus.complete) {
-      
     }
 
-    function handleVoucher(v: Voucher, status: VoucherStatus){
-      switch(status){
+    function handleVoucher(v: Voucher, status: VoucherStatus) {
+      switch (status) {
         case VoucherStatus.complete:
-            console.log(`got voucher ${v}: will pay`);
-            break;
-          case VoucherStatus.draft:
-            console.log(`got voucher ${v}: will save to O365`);
-            break;
-          case VoucherStatus.pending:
-            console.log(`got voucher ${v}: will call the accountant`);
-            break;
-          default:
-            console.log("...")
-            break;
+          console.log(`got voucher ${v}: will pay`);
+          break;
+        case VoucherStatus.draft:
+          console.log(`got voucher ${v}: will save to O365`);
+          break;
+        case VoucherStatus.pending:
+          console.log(`got voucher ${v}: will call the accountant`);
+          break;
+        default:
+          console.log("...");
+          break;
       }
     }
 
-    handleVoucher(<Voucher>{ ID: 1, Text: "Media Markt", Amount: 22, Date: new Date() }, status);
-
+    handleVoucher(
+      <Voucher>{ ID: 1, Text: "Media Markt", Amount: 22, Date: new Date() },
+      status
+    );
   }
 
   useTypings() {
     //using moment
-    let dt = new Date(1990,3,2);
+    let dt = new Date(1990, 3, 2);
     console.log("Using time format: ", moment(dt).format("LTS"));
 
     //using jQuery
@@ -251,12 +253,12 @@ export class TypesComponent implements OnInit {
       fruit.quantity++;
     });
 
-    fruits.forEach((item:any)=> {
+    fruits.forEach((item: any) => {
       item.quantity++;
       console.log(item);
-    })
+    });
 
-    fruits.forEach( item => item.quantity++)
+    fruits.forEach(item => item.quantity++);
 
     //find -> returns first item
     var cherry = fruits.find(function(fruit) {
@@ -270,19 +272,33 @@ export class TypesComponent implements OnInit {
     });
     console.log(cheap);
 
-    //reduce: Sample fruit:  { name: "apples", quantity: 2, price: 3, region: "europe" },
+    //map -> shape arr
+    var names = fruits.map(function(item) {
+      return item.name;
+    });
 
-    var fruitNames = fruits.reduce(function(prevArray, fruit) {
-      prevArray.push(fruit.name);
-      //prevArray.push({ name: "apples", quantity: 2})
-      return prevArray;
-    }, []);
+    //reduce:  You want to find a cumulative or concatenated value based on elements across the array
 
-    console.log(fruitNames);
+    var rockets = [
+      { country: "Russia", launches: 32 },
+      { country: "US", launches: 23 },
+      { country: "China", launches: 16 },
+      { country: "Europe(ESA)", launches: 7 },
+      { country: "India", launches: 4 },
+      { country: "Japan", launches: 3 }
+    ];
+
+    var launches = rockets.reduce(function(prevVal, elem) {
+      return prevVal + elem.launches;
+    }, 0);
+
+    launches = rockets.reduce((prevVal, elem) => prevVal + elem.launches, 0);  //same as above
+
+    console.log("launche so far: ", launches);
 
     //splice
     var dogs = ["whippet", "galgo espanol", "magyar whistler", "magyar agar"];
-    dogs.splice(2, 0, "chart polski"); 
+    dogs.splice(2, 0, "chart polski");
     console.log(dogs); //["whippet", "galgo espanol", "chart polski", "magyar whistler", "magyar agar"]
     dogs.splice(3, 1);
     console.log(dogs); //["whippet", "galgo espanol", "chart polski", "magyar agar"]

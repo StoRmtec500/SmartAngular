@@ -48,7 +48,8 @@ const appRoutes: Routes = [
     component: AdminComponent,
     data: { title: "The protected Admin Page" },
     canActivate: [RouteGuard]
-  }
+  },
+  { path: "**", component: DemosComponent }
 ];
 
 @NgModule({
