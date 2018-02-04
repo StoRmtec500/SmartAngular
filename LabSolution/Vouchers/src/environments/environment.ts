@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  authEnabled: false
+  authEnabled: false,
+  apiUrl: "http://localhost:5000/"
 };
