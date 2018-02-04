@@ -20,18 +20,19 @@ import { FormsBuilderComponent } from './demos/forms-builder/forms-builder.compo
 import { TwoWayPersonComponent } from './demos/two-way-person/two-way-person.component';
 import { PersonsComponent } from './demos/two-way-person/persons/persons.component';
 import { PersonComponent } from './demos/two-way-person/person/person.component';
-import { NavbarComponent, MatchHeightDirective } from './shared/index';
+import { NavbarComponent, MatchHeightDirective, KpiBarComponent, DataStoreService } from './shared/index';
 import { VoucherDetailComponent } from './vouchers/voucher/voucher-detail/voucher-detail.component';
 import { VoucherDetailsListComponent } from './vouchers/voucher/voucher-details-list/voucher-details-list.component';
 import { RouteGuard } from './route.guard.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap';
 import { AdminComponent } from './admin/admin.component';
+import { AccountsService } from './accounts/account.service';
+import { AccountDetailComponent } from './accounts/account-detail/account-detail.component';
+import { SidePanelComponent } from './shared/side-panel/side-panel.component';
 
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
-import { AccountsService } from './accounts/account.service';
-import { AccountDetailComponent } from './accounts/account-detail/account-detail.component';
 registerLocaleData(localeDe)
 
 @NgModule({
@@ -55,7 +56,9 @@ registerLocaleData(localeDe)
     PersonsComponent,
     PersonComponent,
     NavbarComponent,
-    MatchHeightDirective
+    MatchHeightDirective,
+    SidePanelComponent,
+    KpiBarComponent
   ],
   imports: [
     FormsModule,
@@ -69,6 +72,7 @@ registerLocaleData(localeDe)
     BsDatepickerModule.forRoot() 
   ],
   providers: [
+    DataStoreService,
     VouchersService,
     AccountsService,
     {provide: LOCALE_ID, useValue: "de-DE"},

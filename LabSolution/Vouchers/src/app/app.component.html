@@ -9,7 +9,10 @@
       </div>
       <div [class]="setSpacer()"></div>
       <div [class]="setSideDivWidth()">
-        <h4>Sidepanel</h4>
+        <app-side-panel></app-side-panel>
       </div>
     </div>
+  </div>
+  <div class="row" [style.display]="isDemo ? 'none' : 'block'">
+    <app-kpi-bar></app-kpi-bar>
   </div>
