@@ -18,7 +18,7 @@ export class AccountsListComponent implements OnInit {
 
   ngOnInit() {
     this.service.getAccounts().subscribe(data => this.accounts = data)
-    this.Store.setSideCMDs([{title: "Add Account", evt: this.addAccount()}])
+    this.Store.setSideCMDs([{title: "Add Account", evt: this.addAccount}])
   }
 
   showAccount(id: number){
@@ -32,6 +32,6 @@ export class AccountsListComponent implements OnInit {
 
   addAccount(){
     console.log("adding account")
-    this.router.navigate(['/accounts/' + 0]);
+    //this.router.navigate(['/accounts/' + 0]);
   }
 }

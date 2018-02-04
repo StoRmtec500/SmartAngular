@@ -33,6 +33,7 @@ import { SidePanelComponent } from './shared/side-panel/side-panel.component';
 
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
+import { CheckPipe } from './shared/check.pipe';
 registerLocaleData(localeDe)
 
 @NgModule({
@@ -58,7 +59,8 @@ registerLocaleData(localeDe)
     NavbarComponent,
     MatchHeightDirective,
     SidePanelComponent,
-    KpiBarComponent
+    KpiBarComponent,
+    CheckPipe
   ],
   imports: [
     FormsModule,

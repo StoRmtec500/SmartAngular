@@ -56,10 +56,10 @@ export class VoucherComponent implements OnInit {
 
   setCMDs() {
     this.Store.setSideCMDs([
-      { title: "Save Voucher", evt: this.saveVoucher() },
-      { title: "New Detail", evt: this.saveVoucher() },
-      { title: "Save Detail", evt: this.saveVoucher() },
-      { title: "Show Vouchers", evt: this.showVouchers() }
+      { title: "Save Voucher", evt: this.saveVoucher },
+      { title: "New Detail", evt: this.saveVoucher },
+      { title: "Save Detail", evt: this.saveVoucher },
+      { title: "Show Vouchers", evt: this.showVouchers }
     ]);
   }
 

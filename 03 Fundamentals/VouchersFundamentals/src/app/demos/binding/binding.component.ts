@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { Person } from '../nested/persons/persons.component';
+import { Person } from '../../shared/index';
 
 @Component({
   selector: 'app-binding',
@@ -11,12 +11,12 @@ export class BindingComponent implements OnInit {
 
   hide: boolean = false;
   
-  person = {id: 1, name: "Alex", age: 47, imgUrl: "http://www.integrations.at/alex.jpg", gender:'male'};
+  person = {id: 1, name: "Alex", age: 47, imgUrl: "/assets/images/alex.jpg", gender:'male'};
   
   persons : Person[] = [
-    {name: "Heinz", gender: "male", married: true}, 
-    {name: "Brunhilde", gender: "female", married: false},
-    {name: "Susi", gender: "female", married: false}
+    {name: "Heinz", age: 17, gender: "male", married: true}, 
+    {name: "Brunhilde", age: 27, gender: "female", married: false},
+    {name: "Susi", age: 37, gender: "female", married: false}
   ];
 
   selectedPerson: Person = this.persons[0];

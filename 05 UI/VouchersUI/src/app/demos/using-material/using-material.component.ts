@@ -11,7 +11,8 @@ import { Voucher } from '../../shared/index';
   styleUrls: ['./using-material.component.scss']
 })
 export class UsingMaterialComponent implements OnInit {
-  
+
+  card = "/assets/images/CleoSoi.jpg"
 
   constructor(private http:Http) {  }
 

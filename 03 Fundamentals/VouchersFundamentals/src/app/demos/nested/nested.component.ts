@@ -1,5 +1,6 @@
-import { Person } from './persons/persons.component';
+
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Person } from '../../shared/index';
 
 @Component({
   selector: 'app-nested',
