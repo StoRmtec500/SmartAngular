@@ -11,13 +11,13 @@ namespace Vouchers
 
             if (context.BalanceAccounts.FirstOrDefault() == null)
             {
-                var a1 = new BalanceAccount { Name = "Depreciation", Expense = true };
-                var a2 = new BalanceAccount { Name = "Car Maintenance", Expense = true };
-                var a3 = new BalanceAccount { Name = "Development", Expense = false };
-                var a4 = new BalanceAccount { Name = "Consulting", Expense = false };
-                var a5 = new BalanceAccount { Name = "Training", Expense = false };
-                var a6 = new BalanceAccount { Name = "Software", Expense = true };
-                var a7 = new BalanceAccount { Name = "Hosting & Internet", Expense = true };
+                var a1 = new BalanceAccount { Name = "Depreciation", Expense = true, ActivatedOn = DateTime.Now.AddYears(-1)};
+                var a2 = new BalanceAccount { Name = "Car Maintenance", Expense = true, ActivatedOn = DateTime.Now.AddYears(-1) };
+                var a3 = new BalanceAccount { Name = "Development", Expense = false, ActivatedOn = DateTime.Now.AddYears(-1) };
+                var a4 = new BalanceAccount { Name = "Consulting", Expense = false, ActivatedOn = DateTime.Now.AddYears(-1) };
+                var a5 = new BalanceAccount { Name = "Training", Expense = false, ActivatedOn = DateTime.Now.AddYears(-1) };
+                var a6 = new BalanceAccount { Name = "Software", Expense = true, ActivatedOn = DateTime.Now.AddYears(-1) };
+                var a7 = new BalanceAccount { Name = "Hosting & Internet", Expense = true, ActivatedOn = DateTime.Now.AddYears(-1) };
 
                 context.BalanceAccounts.AddRange(a1, a2, a3, a4, a5, a6, a7);
                 context.SaveChanges();

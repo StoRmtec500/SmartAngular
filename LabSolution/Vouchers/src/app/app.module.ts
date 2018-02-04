@@ -1,6 +1,6 @@
 import { HttpModule } from '@angular/http';
 import { ControlMessagesComponent } from './demos/control-messages.component';
-import { AccountsComponent } from './accounts/accounts.component';
+import { AccountsListComponent } from './accounts/accounts-list.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -40,7 +40,7 @@ registerLocaleData(localeDe)
     AppComponent,
     VouchersListComponent,
     AdminComponent,
-    AccountsComponent,
+    AccountsListComponent,
     AccountDetailComponent,
     VoucherComponent,
     VoucherDetailComponent,

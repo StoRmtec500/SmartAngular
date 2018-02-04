@@ -73,7 +73,7 @@ namespace Vouchers
             // For specific URL 
             // corsBuilder.WithOrigins("http://localhost:4200")
             corsBuilder.AllowCredentials();
-            
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
@@ -93,6 +93,7 @@ namespace Vouchers
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, VouchersDBContext dbcontext)
         {
+            //Logging
             loggerFactory.AddNLog();
             env.ConfigureNLog("nlog.config");
 
@@ -107,6 +108,7 @@ namespace Vouchers
                 app.UseStatusCodePages();
             }
 
+            //Startup File
             DefaultFilesOptions options = new DefaultFilesOptions();
             options.DefaultFileNames.Clear();
             options.DefaultFileNames.Add("crud.html");
@@ -129,8 +131,10 @@ namespace Vouchers
                 app.UseStaticFiles();
             }
 
+            //Cors
             app.UseCors("AllowAll");
 
+            //Auth
             //app.UseAuthentication();
 
             app.UseMvcWithDefaultRoute();

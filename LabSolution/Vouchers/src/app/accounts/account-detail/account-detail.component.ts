@@ -9,7 +9,7 @@ import { ActivatedRoute, Params, Router } from "@angular/router";
   styleUrls: ["./account-detail.component.css"]
 })
 export class AccountDetailComponent implements OnInit {
-  account: BalanceAccount = { ID: 0, Name: "", Expense: false };
+  account: BalanceAccount = { ID: 0, Name: "", Expense: false, ActivatedOn : new Date(), Deprecated: false };
 
   constructor(
     private service: AccountsService,

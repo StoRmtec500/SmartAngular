@@ -7,7 +7,7 @@ import { TemplateDrivenComponent } from "./demos/template-driven/template-driven
 import { DemosComponent } from "./demos/demos.component";
 import { VouchersListComponent } from "./vouchers/vouchers-list.component";
 import { VoucherComponent } from "./vouchers/voucher/voucher.component";
-import { AccountsComponent } from "./accounts/accounts.component";
+import { AccountsListComponent } from "./accounts/accounts-list.component";
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule, ViewChild } from "@angular/core";
 import { AdminComponent } from "./admin/admin.component";
@@ -37,7 +37,7 @@ const appRoutes: Routes = [
   },
   {
     path: "accounts",
-    component: AccountsComponent
+    component: AccountsListComponent
   },
   {
     path: "accounts/:id",

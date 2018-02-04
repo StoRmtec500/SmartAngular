@@ -11,9 +11,10 @@ using Vouchers;
 namespace Vouchers.Migrations
 {
     [DbContext(typeof(VouchersDBContext))]
-    partial class VouchersDBContextModelSnapshot : ModelSnapshot
+    [Migration("20180204122545_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

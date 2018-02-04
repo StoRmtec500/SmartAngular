@@ -13,6 +13,8 @@ export class BalanceAccount {
     ID?: number;
     Name: string;
     Expense: boolean;
+    ActivatedOn: Date;
+    Deprecated: boolean;
 }
 
 export class Voucher {

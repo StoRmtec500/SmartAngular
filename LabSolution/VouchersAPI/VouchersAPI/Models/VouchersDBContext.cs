@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Vouchers
 {
@@ -7,7 +8,7 @@ namespace Vouchers
     //dotnet ef migrations add MIGRATION-NAME
     //dotnet ef database update
 
-    public class VouchersDBContext : DbContext
+    public class VouchersDBContext : IdentityDbContext //Use DbContext if not using Identity
     {
         private VouchersConfig config;
 

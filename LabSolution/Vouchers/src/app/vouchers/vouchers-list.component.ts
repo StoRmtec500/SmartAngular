@@ -18,7 +18,7 @@ export class VouchersListComponent implements OnInit {
 
   ngOnInit() {   
     this.vs.getVouchers().subscribe(data => this.vouchers = data)
-    this.Store.setSideCMDs([{title: "New Voucher", evt: this.newVoucher()}])
+    this.Store.setSideCMDs([{title: "Add Voucher", evt: this.newVoucher()}])
   }
 
   showVoucher(id: number){
@@ -29,7 +29,7 @@ export class VouchersListComponent implements OnInit {
     this.vs.deleteVoucher(v.ID).subscribe(data => this.router.navigate(['/vouchers/']))
   }
 
-  newVoucher(){
+  newVoucher():void {
     console.log("adding a voucher")
   }
 }

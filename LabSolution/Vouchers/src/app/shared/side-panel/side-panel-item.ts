@@ -1,5 +1,5 @@
 
 export class SidePanelItem{
     title: string;
-    evt?: void;
+    evt: void;
 }

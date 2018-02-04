@@ -105,7 +105,6 @@ D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp
 D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.dev.json
 D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.dll
 D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.pdb
-D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
 D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
 D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache

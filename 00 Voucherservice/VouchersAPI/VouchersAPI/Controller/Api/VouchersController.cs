@@ -9,7 +9,6 @@ using VouchersNetCore.Common;
 
 namespace Vouchers.Api
 {
-    //[Authorize]
     [EnableCors("AllowAll")]
     [Route("api/[controller]")]
     public class VouchersController : Controller

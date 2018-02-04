@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
@@ -16,6 +17,10 @@ namespace Vouchers
         public string Name { get; set; } 
 
         public bool Expense { get; set; }
+
+        public DateTime ActivatedOn {get; set; }
+
+        public bool Deprecated { get; set; }
 
         [JsonIgnore]
         public ICollection<VoucherDetail> VoucherDetails { get; set; }
