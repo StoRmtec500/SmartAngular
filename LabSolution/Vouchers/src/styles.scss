@@ -1,6 +1,3 @@
-$dark-brown: #797474;
-$medium-brown: #ADA0A0;
-$occa: #F2F2F2;
 
 .spacer{
     margin: 10px 0px;
@@ -10,23 +7,29 @@ $occa: #F2F2F2;
     margin-top: 1rem;
 }
 
+$section-border-col: #ADA0A0;
+$section-back-col: #F2F2F2;
+
 .section{
     margin: 10px 0px 10px 0px;
     padding: 15px 10px;    
-    border: 1px solid $medium-brown;
-    background-color: $occa;
+    border: 1px solid $section-border-col;
+    background-color: $section-back-col;
 }
 
 body{
     padding: 10px;
-    background-color:  $occa;
+    background-color:  $section-back-col;
 }
-    
+
+$sidebar-back-col: #797474;
+
 .sidebar-module, .navbar-inverse{
-    background-color: $dark-brown;
+    background-color: $sidebar-back-col;
 }
 
 $panelBackground: white;
+$panel-back-col: #797474;
 
 .panel {
     background-color: $panelBackground;    
@@ -40,14 +43,14 @@ inner-panel{
 .cmdPanel{
     padding: 10px 10px;  
     color:$panelBackground;
-    background-color: $dark-brown;
+    background-color: $panel-back-col;
 }
 
 .cmdPanelSmall{
     padding: 5px;
     margin: 10px 0px;
     color: $panelBackground;
-    background-color: $dark-brown;
+    background-color: $panel-back-col;
 }
 
 .rightCell{
@@ -58,9 +61,9 @@ $buttonCol: red;
 $buttonFontCol: white;
 
 .theme-green .bs-datepicker-head {
-    background-color: $dark-brown;
+    background-color: $panel-back-col;
 }
 
 .theme-green .bs-datepicker-body table td.week span {
-    color:  $dark-brown;
+    color:  $panel-back-col;
 }
