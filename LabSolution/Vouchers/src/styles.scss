@@ -58,7 +58,8 @@ inner-panel{
 }
 
 $buttonCol: red;
-$buttonFontCol: white;
+$buttonFontColLight: white;
+$buttonFontCol:  #797474;
 
 .theme-green .bs-datepicker-head {
     background-color: $panel-back-col;
@@ -67,3 +68,20 @@ $buttonFontCol: white;
 .theme-green .bs-datepicker-body table td.week span {
     color:  $panel-back-col;
 }
+
+$oddRowCol: #F2F2F2;
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: $oddRowCol;
+ }
+
+ @mixin mouse {
+    cursor: pointer;
+}
+
+ .table-cmd{
+     color: $buttonFontCol;
+     font-weight: bold;     
+     @include mouse;
+ }
+
