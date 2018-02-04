@@ -1,0 +1,5 @@
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI
+--output-path=obj\Debug\netcoreapp2.0\
+--application-name=VouchersAPI
+--content-root=C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI
+--file=C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\Views\Home\Index.cshtml

@@ -1,0 +1,11 @@
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\bin\Debug\netcoreapp2.0\VouchersDataAccess.deps.json
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\bin\Debug\netcoreapp2.0\VouchersDataAccess.runtimeconfig.json
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\bin\Debug\netcoreapp2.0\VouchersDataAccess.runtimeconfig.dev.json
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\bin\Debug\netcoreapp2.0\VouchersDataAccess.dll
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\bin\Debug\netcoreapp2.0\VouchersDataAccess.pdb
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\obj\Debug\netcoreapp2.0\VouchersDataAccess.csprojResolveAssemblyReference.cache
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\obj\Debug\netcoreapp2.0\VouchersDataAccess.csproj.CoreCompileInputs.cache
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\obj\Debug\netcoreapp2.0\VouchersDataAccess.AssemblyInfoInputs.cache
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\obj\Debug\netcoreapp2.0\VouchersDataAccess.AssemblyInfo.cs
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\obj\Debug\netcoreapp2.0\VouchersDataAccess.dll
+D:\PCWD\06 Data Access\VouchersDataAccess\VouchersDataAccess\obj\Debug\netcoreapp2.0\VouchersDataAccess.pdb

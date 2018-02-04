@@ -1,0 +1,124 @@
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.deps.json
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.json
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.dev.json
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.dll
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.pdb
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.dll
+D:\smartAngular\06 API\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.pdb
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.deps.json
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.json
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.dev.json
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.dll
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.pdb
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.dll
+D:\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.pdb
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.deps.json
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.json
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.dev.json
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.dll
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.pdb
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.dll
+D:\smartAngular\07 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.pdb
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.deps.json
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.json
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.dev.json
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.dll
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.pdb
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.dll
+D:\Classes\smartAngularPublic\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.pdb
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.deps.json
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.json
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.dev.json
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.dll
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.pdb
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.dll
+D:\Classes\smartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.pdb
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.deps.json
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.json
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.runtimeconfig.dev.json
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.dll
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\VouchersAPI.pdb
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.dll
+C:\SmartAngular\06 Data Access\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.pdb
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.deps.json
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.json
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.dev.json
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.dll
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.pdb
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.dll
+C:\_Data\Webs\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.pdb
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.deps.json
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.json
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.dll
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.pdb
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.dll
+C:\Users\Administrator\Desktop\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.pdb
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.deps.json
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.json
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.dev.json
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.dll
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.pdb
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csprojResolveAssemblyReference.cache
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.dll
+D:\SmartAngular\06 Data Access\Voucherservice\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.pdb
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.deps.json
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.json
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.dev.json
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.dll
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.pdb
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.dll
+D:\Classes\SmartAngular\LabSolution\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.pdb
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.deps.json
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.json
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.runtimeconfig.dev.json
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.dll
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\bin\Debug\netcoreapp2.0\Vouchers.pdb
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.csproj.CoreCompileInputs.cache
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfoInputs.cache
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\VouchersAPI.AssemblyInfo.cs
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.dll
+D:\Classes\SmartAngular\12 Publishing\VouchersAPI\VouchersAPI\obj\Debug\netcoreapp2.0\Vouchers.pdb

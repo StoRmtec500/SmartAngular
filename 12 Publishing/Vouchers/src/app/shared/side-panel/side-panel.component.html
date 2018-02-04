@@ -1,0 +1,5 @@
+<div class="cmds">
+  <div *ngFor="let c of cmds" class="item">
+    <a class="table-cmd" (click)="executeAction(c.evt)" >{{c.title}}</a>
+  </div>
+</div>

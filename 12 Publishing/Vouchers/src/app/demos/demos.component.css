@@ -1,0 +1,13 @@
+a {
+    display: block;
+    text-decoration: none;    
+    cursor: pointer;
+    padding-bottom: 3px;
+}
+
+
+
+.imgCell{
+    padding-top: 5px;
+    vertical-align: middle;
+}
