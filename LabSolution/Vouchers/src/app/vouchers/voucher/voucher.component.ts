@@ -1,7 +1,12 @@
 import { ActivatedRoute, Params, Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 import { VouchersService } from "../voucher.service";
-import { Voucher, VoucherDetail, BalanceAccount } from "../../shared/index";
+import {
+  Voucher,
+  VoucherDetail,
+  BalanceAccount,
+  DataStoreService
+} from "../../shared/index";
 import { FormBuilder } from "@angular/forms";
 
 @Component({
@@ -26,10 +31,16 @@ export class VoucherComponent implements OnInit {
     private vs: VouchersService,
     private route: ActivatedRoute,
     private router: Router,
+    private Store: DataStoreService,
     private fb: FormBuilder
   ) {}
 
   ngOnInit() {
+   this.loadData();
+   this.setCMDs();
+  }
+
+  loadData(){
     let id = this.route.snapshot.params["id"];
 
     if (id != 0) {
@@ -41,6 +52,19 @@ export class VoucherComponent implements OnInit {
         }
       });
     }
+  }
+
+  setCMDs() {
+    this.Store.setSideCMDs([
+      { title: "Save Voucher", evt: this.saveVoucher() },
+      { title: "New Detail", evt: this.saveVoucher() },
+      { title: "Save Detail", evt: this.saveVoucher() },
+      { title: "Show Vouchers", evt: this.showVouchers() }
+    ]);
+  }
+
+  showVouchers(){
+
   }
 
   saveVoucher() {
@@ -56,17 +80,14 @@ export class VoucherComponent implements OnInit {
     this.currentDetail = detail;
   }
 
-  saveDetail(detail : VoucherDetail) {
-    
-    if(detail.ID != 0){
-      detail.Account = this.accounts.find(a=>a.ID==detail.AccountID);
-    }
-    else{
-      if(this.voucher.Details == null){
+  saveDetail(detail: VoucherDetail) {
+    if (detail.ID != 0) {
+      detail.Account = this.accounts.find(a => a.ID == detail.AccountID);
+    } else {
+      if (this.voucher.Details == null) {
         this.voucher.Details = new Array<VoucherDetail>();
       }
       this.voucher.Details.push(detail);
     }
-
   }
 }

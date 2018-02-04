@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataStoreService } from '../index';
+import { SidePanelItem } from './side-panel-item';
 
 @Component({
   selector: 'app-side-panel',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidePanelComponent implements OnInit {
 
-  constructor() { }
+  cmds : SidePanelItem[];
+
+  constructor(private Store: DataStoreService) { }
 
   ngOnInit() {
+    this.Store.SideCMDs.subscribe(items=>this.cmds = items);
   }
 
 }

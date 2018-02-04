@@ -1,0 +1,8 @@
+.cmds {
+  display: flex;
+  flex-direction: column;
+}
+
+.cmd {
+  min-width: 100px;
+}
