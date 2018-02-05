@@ -22,6 +22,7 @@ export class TypesComponent implements OnInit {
     var age: number;
     var weight: number = 83.12;
     var dogWeight = 25.4;    
+    // dogWeight = "heavy"
     var rand = Math.random();
 
     var numbers: number[] = [];
@@ -144,9 +145,15 @@ export class TypesComponent implements OnInit {
       happy = 2,
       unhappy = 4,
       ok = 6
-    }
+    }   
 
     let isHappy: Happyness = Happyness.happy;
+
+    enum Sex {
+      male = "m",
+      female = "f",
+      undefined = "u"
+    }
 
     enum VoucherStatus {
       draft,      
@@ -218,10 +225,8 @@ export class TypesComponent implements OnInit {
 
     // array destructuring
     let arrNbr = [8, 4, 100, -5, 20];
-    let [first, second, third] = arrNbr;
-
-    // output: 100, 4, 8
-    console.log(third, second, first);
+    let [first, second, third] = arrNbr;   
+    console.log(third, second, first); // output: 100, 4, 8
 
     let myArray = [1, ["hello"], true],
       [a, b, c] = myArray;
@@ -255,8 +260,7 @@ export class TypesComponent implements OnInit {
     });
 
     fruits.forEach((item: any) => {
-      item.quantity++;
-      console.log(item);
+      item.quantity++;     
     });
 
     fruits.forEach(item => item.quantity++);
