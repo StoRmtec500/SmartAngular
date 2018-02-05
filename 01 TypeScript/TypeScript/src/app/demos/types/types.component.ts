@@ -14,21 +14,21 @@ export class TypesComponent implements OnInit {
   ngOnInit() {}
 
   basicVariables() {
-    // debugger;
+    debugger;
 
     var myname: string = "alex";
 
     //Numbers
     var age: number;
     var weight: number = 83.12;
-    var dogWeight = 25.4;
+    var dogWeight = 25.4;    
     var rand = Math.random();
 
     var numbers: number[] = [];
     var myNumArray: Array<number> = new Array();
 
     numbers[0] = 1;
-    //numbers.push("two"); // compile-time error
+    // numbers.push("two"); // compile-time error
 
     let notSure: any = 4;
     notSure = "maybe a string instead";
@@ -68,6 +68,9 @@ export class TypesComponent implements OnInit {
     console.log(index); // 0
     const pi = 3.14;
     //pi = 2;
+
+    const person = {name: "john", age: 22};
+    person.name = "franz";
   }
 
   stringFunctions() {
@@ -75,6 +78,7 @@ export class TypesComponent implements OnInit {
 
     var productID = 100;
     var category = "music";
+
     //string concatenation
     var url = "http://server/" + category + "/" + productID;
     console.log(url);
@@ -88,7 +92,7 @@ export class TypesComponent implements OnInit {
     console.log(str.startsWith("To be")); // true
     console.log(str.endsWith("question.")); // true
 
-    //include
+    //include -> C# string.contains
     function countString(ts) {
       const characters = ["a", "b", "c"];
       let ct = 0;
@@ -145,7 +149,7 @@ export class TypesComponent implements OnInit {
     let isHappy: Happyness = Happyness.happy;
 
     enum VoucherStatus {
-      draft,
+      draft,      
       complete,
       pending
     }
@@ -176,10 +180,7 @@ export class TypesComponent implements OnInit {
       }
     }
 
-    handleVoucher(
-      <Voucher>{ ID: 1, Text: "Media Markt", Amount: 22, Date: new Date() },
-      status
-    );
+    handleVoucher(<Voucher>{ ID: 1, Text: "Media Markt", Amount: 22, Date: new Date() },status);
   }
 
   useTypings() {
