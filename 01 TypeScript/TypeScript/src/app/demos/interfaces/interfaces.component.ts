@@ -82,10 +82,8 @@ export class InterfacesComponent implements OnInit {
     //Function Interfaces
 
     interface SearchFunc { (source: string, subString: string): boolean; }
-    var mySearch: SearchFunc;
-
-    mySearch = function (source: string, subString: string) { return false; }
-
-    mySearch = (source: string, subString: string) => false;
+    
+    var searchDelegate: SearchFunc = function (source: string, subString: string) { return false; }
+    searchDelegate = (source: string, subString: string) => false;
   }
 }

@@ -63,6 +63,7 @@ export class GenericsComponent implements OnInit {
     let cat = new Catalog<Voucher>();
     var v: Voucher = { ID: 1, Text: "Media Markt", Amount: 22, Date: new Date(), Paid: false, Expense: true };
     cat.addItem(v);
+    console.log("Items in the catalog", cat.getAllItems)
   };
 
 

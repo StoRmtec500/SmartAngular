@@ -45,7 +45,6 @@ export class ClassesComponent implements OnInit {
     }
 
     //try changing: let v -> var v ... think why
-
     for (let v of vouchers) {
       console.log(v.Text);
     }
@@ -55,7 +54,7 @@ export class ClassesComponent implements OnInit {
     debugger;
 
     class Person {
-      name: string;
+      name: string; //public by default
       alive: boolean;
 
       constructor(Name: string, Alive: boolean) {
@@ -67,7 +66,7 @@ export class ClassesComponent implements OnInit {
     let jim = new Person("Jim", true);
     console.log(jim.name + " is alive: " + jim.alive);
 
-    class Bill {
+    class Invoice {
       text: string;
       paid: boolean;
 
@@ -77,8 +76,8 @@ export class ClassesComponent implements OnInit {
       }
     }
 
-    var b1: Bill = new Bill("Car Purchase");
-    var b2: Bill = new Bill("Rösti für Freundin", true);
+    var b1: Invoice = new Invoice("Car Purchase");
+    var b2: Invoice = new Invoice("Rösti für Freundin", true);
 
     console.log("b1 with Text: " + b1.text + " was " + b1.paid);
     console.log("b2 with Text: " + b2.text + " was " + b2.paid);
@@ -90,7 +89,7 @@ export class ClassesComponent implements OnInit {
         return "Wuff, my name is " + this.name + ", I am a " + this.breed;
       }
       sayName() {
-        return "Wuff, my name is " + name; // + ", I am a " + breed;
+        return "Wuff, my name is " + name;  // Wuff, my name is 
       }
     }
 
@@ -156,16 +155,19 @@ export class ClassesComponent implements OnInit {
 
     class Sighthound extends Dog {
       
-      constructor(name: string) { super(name); }
+      constructor(name: string) { super(name); } //super -> C# .base
       
       public speed: string = "with up to 110 km/h";
       
+      //method override
       move(meters = 500) {
         console.log("Running ..." + meters + "m. " + this.speed);
         //If you want to call implementation of base class use:
         super.move(meters);
       }
     }
+
+    //var d = new Dog()
 
     var dog = new Dog("Bello");
     dog.move(50);
