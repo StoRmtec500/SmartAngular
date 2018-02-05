@@ -22,6 +22,8 @@ export class ServicesComponent implements OnInit {
   ngOnInit() {}
 
   usingjQueryAjax() {
+
+    //callback based
     $.ajax({
       type: "GET",
       url: this.url,
@@ -36,9 +38,12 @@ export class ServicesComponent implements OnInit {
         console.log("Error received from jQuery: ", err);
       }
     });
+
   }
 
   usingjQueryWithPromise() {
+
+    //promise based
     $.ajax({
       type: "GET",
       url: this.url,
@@ -78,8 +83,9 @@ export class ServicesComponent implements OnInit {
   }
 
   usingFetchAwait() {
+    
     async function getAllVouchers() {
-      let response = await fetch(this.url);
+      let response = await fetch("/assets/vouchers.json");
       let voucher = await response.json();
       console.log("Data received using fetch - await");
       console.log(voucher);

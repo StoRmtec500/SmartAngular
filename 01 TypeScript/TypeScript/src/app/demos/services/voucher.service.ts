@@ -3,7 +3,7 @@ import * as $ from "jquery";
 
 export class VoucherService {
   getVouchers(): Promise<Voucher[]> {
-    let url = "http://voucherservice.integrations.at";
+    let url = "/assets/vouchers.json";
 
     return new Promise<Voucher[]>((resolve, reject) => {
       fetch(url)
