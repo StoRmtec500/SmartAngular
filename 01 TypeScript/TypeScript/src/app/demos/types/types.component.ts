@@ -314,21 +314,27 @@ export class TypesComponent implements OnInit {
     debugger;
 
     var myMap = new Map();
-    var keyString = "a string",
-      keyObj = {},
-      keyFunc = function() {
-        console.log("function in map array");
-      };
+    var keyString = "a string";
+    var keyObj = {};
+    var keyFunc = function() {
+      console.log("function in map array");
+    };
+
     // setting the values
     myMap.set(keyString, "value associated with 'a string'");
     myMap.set(keyObj, "value associated with keyObj");
     myMap.set(keyFunc(), "value associated with keyFunc");
+
     console.log("Map size: " + myMap.size); // 3
 
     // getting the values
     myMap.get(keyString); // "value associated with 'a string'"
     myMap.get("a string"); // "value associated with 'a string'" because keyString === 'a string'
     myMap.get(keyObj); // "value associated with keyObj"
+
+    myMap.delete(keyString)
+    myMap.clear()    
+
   }
 
   //-> Indexed Array
@@ -384,6 +390,7 @@ export class TypesComponent implements OnInit {
   }
 
   spreadOperator() {
+    
     console.log(Math.max(3, 5, 1)); // 5
 
     let arr = [3, 5, 1];

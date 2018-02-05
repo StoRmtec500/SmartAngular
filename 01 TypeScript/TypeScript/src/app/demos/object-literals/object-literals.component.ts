@@ -14,12 +14,12 @@ export class ObjectLiteralsComponent implements OnInit {
   objectsBasics() {
     debugger; 
 
+    // Plain old JavaScript
     var myPerson = new Object();
-    //myPerson.smile = function(){...}
+    // myPerson.smile = function(){...}
 
     var otherPerson = <any> {};
-    otherPerson.smile = function(){
-      
+    otherPerson.smile = function(){      
     }
 
     let person: any = { Id: 1, Name: "Alexander" };
@@ -52,8 +52,15 @@ export class ObjectLiteralsComponent implements OnInit {
       };
     }
 
+    function getPersonClone(person : any){
+      return {...person};
+    }
+
+    let person: any = { Id: 1, Name: "Alexander" }
+    var cloned = getPersonClone(person);
+
     //Method definition shorthand
-    function getBusES5(make, model, value) {
+    function getBusES5(value) {
       return {
         depreciate: function() {
           this.value -= 2500;
@@ -61,7 +68,7 @@ export class ObjectLiteralsComponent implements OnInit {
       };
     }
 
-    function getBus(make, model, value) {
+    function getBus(value) {
       return {
         // Method definition shorthand syntax
         // omits `function` keyword & colon
@@ -77,6 +84,7 @@ export class ObjectLiteralsComponent implements OnInit {
 
     // object pattern matching
     let { lName, fName } = { fName: "John", lName: "Doe" };
+    //let { Name, FirstName } = { fName: "John", lName: "Doe" };
 
     // output: Doe, John
     console.log(lName + ", " + fName);
@@ -90,6 +98,16 @@ export class ObjectLiteralsComponent implements OnInit {
     // Destructuring using REST Param
     var { w, x, ...remaining } = { w: 1, x: 2, y: 3, z: 4 };
     console.log(w, x, remaining); // 1, 2, {y:3,z:4}
+  }
+
+  objAssign() {
+    debugger;
+
+    var obj = { name: "alex" };
+    var copy = Object.assign({}, obj, {
+      birth: moment("19700402", "YYYYMMDD").format("MMM Do YY")
+    });
+    console.log(copy);
   }
 
   valref() {
@@ -107,22 +125,12 @@ export class ObjectLiteralsComponent implements OnInit {
     console.log("result for myNumber & person:", myNumber, person);
 
     myNumber = 500;
-    person.name = "Alexander";
+    person.Name = "Alexander";
     passArgs(myNumber,  Object.assign({}, person));
     console.log("result for myNumber & person using Object.assign():", myNumber, person);
 
     passArgs(myNumber, {...person});
     console.log("result for myNumber & person using spread:", myNumber, person);
-  }
-
-  objAssign() {
-    debugger;
-
-    var obj = { name: "alex" };
-    var copy = Object.assign({}, obj, {
-      birth: moment("19700402", "YYYYMMDD").format("MMM Do YY")
-    });
-    console.log(copy);
   }
 
   copyspread() {

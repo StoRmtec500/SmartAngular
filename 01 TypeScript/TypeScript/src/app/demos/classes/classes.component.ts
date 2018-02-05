@@ -20,29 +20,28 @@ export class ClassesComponent implements OnInit {
       Text: string;
       Amount: number;
       Date: Date;
+      Total?: number;
     }
 
-    let v: Voucher = new Voucher();
+    let v: Voucher = new Voucher(); // v: {}
     v.ID = 0;
     v.Text = "Demo Voucher";
 
     console.log("vouchertext is:" + v["Text"]);
 
     var vouchers = new Array<Voucher>();
-    var vM: Voucher = { ID: 1, Text: "Media Markt", Amount: 22, Date: new Date() };
-    vouchers.push(vM);
-    var vA: Voucher = { ID: 2, Text: "Amazon", Amount: 44, Date: new Date() };
-    vouchers.push(vA);
+    var voucherA: Voucher = { ID: 1, Text: "Media Markt", Amount: 22, Date: new Date() };
+    vouchers.push(voucherA);
+    var voucherB: Voucher = { ID: 2, Text: "Amazon", Amount: 44, Date: new Date() };
+    vouchers.push(voucherB);
 
     for (var i = 0; i < vouchers.length; i++) {
       let v = vouchers[i];
       console.log(v.Text);
     }
 
-    for (let v in vouchers) {
-      if (vouchers.hasOwnProperty(v)) {
-        console.log(v);
-      }
+    for (let v in vouchers) {     
+        console.log(v);     
     }
 
     //try changing: let v -> var v ... think why
