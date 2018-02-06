@@ -34,6 +34,8 @@ import { SidePanelComponent } from './shared/side-panel/side-panel.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { CheckPipe } from './shared/check.pipe';
+import { EventBusService } from './shared/event-bus/event-bus.service';
+
 registerLocaleData(localeDe)
 
 @NgModule({
@@ -75,10 +77,11 @@ registerLocaleData(localeDe)
   ],
   providers: [
     DataStoreService,
+    EventBusService,
     VouchersService,
     AccountsService,
     {provide: LOCALE_ID, useValue: "de-DE"},
-    RouteGuard
+    RouteGuard    
   ],
   bootstrap: [AppComponent]
 })

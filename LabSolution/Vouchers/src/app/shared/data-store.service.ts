@@ -3,7 +3,6 @@ import { VouchersService } from "../vouchers/voucher.service";
 import { Observable } from "rxjs/Observable";
 import { BehaviorSubject } from "rxjs";
 import { Voucher } from "./index";
-import { SidePanelItem } from "./side-panel/side-panel-item";
 
 @Injectable()
 export class DataStoreService {
@@ -11,10 +10,6 @@ export class DataStoreService {
   private vouchersArray: Voucher[] = [];
   private vouchers: BehaviorSubject<Voucher[]> = new BehaviorSubject(this.vouchersArray);
   public Vouchers: Observable<Voucher[]> = this.vouchers.asObservable();
-
-  private sideCMDsArray: SidePanelItem [] = [];
-  private sideCMDs: BehaviorSubject<SidePanelItem[]> = new BehaviorSubject(this.sideCMDsArray);
-  public SideCMDs: Observable<SidePanelItem[]> = this.sideCMDs.asObservable();
 
 
   constructor(private vs: VouchersService) {
@@ -63,10 +58,5 @@ export class DataStoreService {
       this.vouchersArray.push(v);
       this.vouchers.next(this.vouchersArray);
     }, 10000)
-  }
-
-  setSideCMDs(items: SidePanelItem[]){
-    this.sideCMDsArray = items;
-    this.sideCMDs.next(items);
   }
 }

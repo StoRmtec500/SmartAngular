@@ -2,8 +2,8 @@ import { VouchersService } from './voucher.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Voucher } from '../shared/model/model';
 import { Component, OnInit } from '@angular/core';
-import { DataStoreService } from '../shared/index';
-
+import { EventBusService } from '../shared/event-bus/event-bus.service';
+import { VOUCHER_ADD } from '../shared/event-bus/action.types';
 
 @Component({
   selector: 'app-vouchers-list',
@@ -14,11 +14,11 @@ export class VouchersListComponent implements OnInit {
   
   vouchers: Voucher[];
  
-  constructor(private router: Router, private vs: VouchersService, private Store: DataStoreService) {  }
+  constructor(private router: Router, private vs: VouchersService, private ebus: EventBusService) {  }
 
   ngOnInit() {   
     this.vs.getVouchers().subscribe(data => this.vouchers = data)
-    this.Store.setSideCMDs([{title: "Add Voucher", evt: this.addVoucher}])
+    this.ebus.setSideCMDs([{title: "Add Voucher", action: VOUCHER_ADD}])
   }
 
   showVoucher(id: number){

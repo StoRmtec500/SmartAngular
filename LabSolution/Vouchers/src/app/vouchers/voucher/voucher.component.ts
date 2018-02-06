@@ -8,6 +8,8 @@ import {
   DataStoreService
 } from "../../shared/index";
 import { FormBuilder } from "@angular/forms";
+import { EventBusService } from "../../shared/event-bus/event-bus.service";
+import { VOUCHER_SAVE, VOUCHER_ADD_DETAIL, VOUCHER_SAVE_DETAIL, VOUCHER_SHOW_LIST } from "../../shared/event-bus/action.types";
 
 @Component({
   selector: "app-voucher",
@@ -31,7 +33,8 @@ export class VoucherComponent implements OnInit {
     private vs: VouchersService,
     private route: ActivatedRoute,
     private router: Router,
-    private Store: DataStoreService,
+    private store: DataStoreService,
+    private ebus: EventBusService,
     private fb: FormBuilder
   ) {}
 
@@ -55,11 +58,11 @@ export class VoucherComponent implements OnInit {
   }
 
   setCMDs() {
-    this.Store.setSideCMDs([
-      { title: "Save Voucher", evt: this.saveVoucher },
-      { title: "New Detail", evt: this.saveVoucher },
-      { title: "Save Detail", evt: this.saveVoucher },
-      { title: "Show Vouchers", evt: this.showVouchers }
+    this.ebus.setSideCMDs([
+      { title: "Save Voucher", action: VOUCHER_SAVE },
+      { title: "New Detail", action: VOUCHER_ADD_DETAIL },
+      { title: "Save Detail", action: VOUCHER_SAVE_DETAIL },
+      { title: "Show Vouchers", action: VOUCHER_SHOW_LIST }
     ]);
   }
 

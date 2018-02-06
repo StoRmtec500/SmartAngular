@@ -6,5 +6,5 @@ export interface ICmdAction{
 
 export class SidePanelItem{
     title: string;
-    evt: ICmdAction;
+    action: string;
 }

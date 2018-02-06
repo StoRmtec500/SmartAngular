@@ -3,6 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { BalanceAccount } from '../shared/model/model';
 import { Component, OnInit } from '@angular/core';
 import { DataStoreService } from '../shared/index';
+import { EventBusService } from '../shared/event-bus/event-bus.service';
+import { ACCOUNT_ADD } from '../shared/event-bus/action.types';
 
 
 @Component({
@@ -14,11 +16,11 @@ export class AccountsListComponent implements OnInit {
 
   accounts: BalanceAccount[];
 
-  constructor(private router: Router, private service: AccountsService, private Store: DataStoreService) { }
+  constructor(private router: Router, private service: AccountsService, private ebus: EventBusService) { }
 
   ngOnInit() {
     this.service.getAccounts().subscribe(data => this.accounts = data)
-    this.Store.setSideCMDs([{title: "Add Account", evt: this.addAccount}])
+    this.ebus.setSideCMDs([{title: "Add Account", action: ACCOUNT_ADD}])
   }
 
   showAccount(id: number){
