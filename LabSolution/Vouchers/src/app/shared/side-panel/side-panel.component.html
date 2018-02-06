@@ -1,5 +1,5 @@
 <div class="cmds">
   <div *ngFor="let c of cmds" class="item">
-    <a class="table-cmd" (click)="executeAction(c.evt)" >{{c.title}}</a>
+    <a class="table-cmd" (click)="dispatchAction(c.action)" >{{c.title}}</a>
   </div>
 </div>

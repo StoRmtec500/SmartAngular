@@ -19,6 +19,11 @@ export class VouchersListComponent implements OnInit {
   ngOnInit() {   
     this.vs.getVouchers().subscribe(data => this.vouchers = data)
     this.ebus.setSideCMDs([{title: "Add Voucher", action: VOUCHER_ADD}])
+    this.ebus.SideEvt.subscribe(this.evalAction);
+  }
+
+  evalAction(action: string){
+    console.log("receiving action from side panel: " + action)
   }
 
   showVoucher(id: number){

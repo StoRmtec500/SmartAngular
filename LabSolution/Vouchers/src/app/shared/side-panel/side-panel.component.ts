@@ -19,8 +19,8 @@ export class SidePanelComponent implements OnInit {
     this.ebus.SideCMDs.subscribe(items=>this.cmds = items);
   }
 
-  executeAction(action : ICmdAction){
-    action();
+  dispatchAction(action : string){
+    this.ebus.triggerAction(action);
   }
 
 }

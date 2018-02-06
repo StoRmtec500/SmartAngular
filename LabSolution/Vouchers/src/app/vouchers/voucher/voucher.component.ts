@@ -41,6 +41,7 @@ export class VoucherComponent implements OnInit {
   ngOnInit() {
    this.loadData();
    this.setCMDs();
+   this.ebus.SideEvt.subscribe(this.evalAction);
   }
 
   loadData(){
@@ -64,6 +65,10 @@ export class VoucherComponent implements OnInit {
       { title: "Save Detail", action: VOUCHER_SAVE_DETAIL },
       { title: "Show Vouchers", action: VOUCHER_SHOW_LIST }
     ]);
+  }
+
+  evalAction(action: string){
+    console.log("receiving action from side panel: " + action)
   }
 
   showVouchers(){
