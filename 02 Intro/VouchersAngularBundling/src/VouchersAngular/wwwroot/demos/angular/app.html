@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <title>Angular WebPack</title>
+    <script type="text/javascript" src="/demos/angular/js/bundle.js"></script>
+
+</head>
+<body ng-controller="voucherController">
+    Angular WebPack
+    <h1>Our Vouchers</h1>
+    <h3 ng-repeat="voucher in vouchers">{{voucher.Text}} - {{voucher.Amount | currency }}</h3>
+</body>
+</html>

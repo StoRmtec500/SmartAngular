@@ -1,0 +1,139 @@
+﻿<script src="/js/Views/voucherdetails.js"></script>
+
+<div id="divVoucherDetails" class="container">
+    <div class="row clearfix">
+        <div class="form-inline" role="form">
+            <!--Voucher Head Data-->
+            <fieldset>
+                <legend>
+                    Voucher <input ng-model="VVM.CurrentVoucher.ID" readonly class="readonlyID"/>
+                    <span class="right">
+                        <a ng-click="showVouchers()" class="btn btn-xs btn-default">Cancle/Back</a>
+                        <a ng-click="saveVoucher(VVM.CurrentVoucher)" class="btn btn-xs btn-default">Save Voucher</a>
+                    </span>
+                </legend>
+                <div class="form-group">
+                    <input id="VoucherText" ng-model="VVM.CurrentVoucher.Text" size="40" type="text" placeholder="Text:" class="form-control input-sm"/>
+                </div>
+                <div class="form-group">
+                    <input ng-model="VVM.CurrentVoucher.Date" bs-datepicker id="dpDate" size="10" type="text" placeholder="Date:" class="span7 form-control input-sm"/>
+                </div>
+                <div class="form-group">
+                    <input ng-model="VVM.CurrentVoucher.Amount" id="txtAmount" size="15" type="text" placeholder="0" class="span7 form-control input-sm"/>
+                </div>
+                <!-- Voucher Type / Paid -->
+                <ul class="voucherRadio form-group">
+                    <li>
+                        <label class="radio-inline" for="rbExpense">
+                            <input type="radio" name="radios" id="rbExpense" ng-value="true" ng-model="VVM.CurrentVoucher.Expense"/>
+                            Expense:
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio-inline" for="rbIncome">
+                            <input type="radio" name="radios" id="rbIncome" ng-value="false" ng-model="VVM.CurrentVoucher.Expense"/>
+                            Income:
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-inline" for="chkPaid">
+                            <input ng-checked="VVM.CurrentVoucher.Paid" ng-model="VVM.CurrentVoucher.Paid" type="checkbox" name="checkboxes" id="chkPaid" value="Paid"/>
+                            Paid:
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-inline" for="chkRemark">
+                            <input ng-checked="VVM.CurrentVoucher.Remark" ng-model="VVM.CurrentVoucher.Remark" type="checkbox" name="checkboxes" id="chkRemark" value="Remark" />
+                            Remember:
+                        </label>
+                    </li>
+                </ul>
+                <p>
+                </p>
+                <!--Voucher Details Table-->
+                <fieldset> </fieldset>
+                <legend>All Details</legend>
+
+                <div class="row clearfix"> </div>
+                <p class="spacer-big"></p>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" class="table table-hover">
+                        <colgroup>
+                            <col style="width: 5%"/>
+                            <col style="width: 40%"/>
+                            <col style="width: 15%"/>
+                            <col style="width: 30%"/>
+                            <col style="width: 5%"/>
+                            <col style="width: 5%"/>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Text</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Account</th>
+                            <th colspan="2" scope="col">
+                                <a id="btnNew" ng-click="newDetail()" class="btn btn-xs btn-default">New</a>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblVoucherDetailsBody">
+                        <tr ng-repeat="vd in VVM.CurrentVoucher.Details">
+                            <td class="readonlyID">{{vd.ID}}</td>
+                            <td> {{vd.Text}}</td>
+                            <td class="detailsAmountItem">{{vd.Amount}}</td>
+                            <td> {{vd.Account.Name}}</td>
+                            <td>
+                                <a ng-click="deleteDetail(vd)" class="btn btn-xs btn-default">Delete</a>
+                            </td>
+                            <td>
+                                <a ng-click="editDetail(vd)" class="btn btn-xs btn-default">Edit</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <!--Selected Voucher Details-->
+    <div class="row clearfix vDetails">
+        <fieldset>
+            <!-- Form Name -->
+            <legend>
+                Selected Detail
+                <span class="right">
+                        <a ng-click="saveVoucherDetail(VVM.EditDetail)" class="btn btn-xs btn-default">Save Detail</a>
+                    </span>
+            </legend>
+            <!-- Text input-->
+            <div class="form-inline">
+                <div class="form-group">
+                    <div class="">
+                        <input ng-model="VVM.EditDetail.ID" id="txtDetailsID" type="text" readonly class="form-control input-sm vdElement"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="">
+                        <input ng-model="VVM.EditDetail.Text" id="txtDetailsText" size="40" type="text" placeholder="Text:" class="form-control input-sm vdElement"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="">
+                        <input ng-model="VVM.EditDetail.Amount" id="txtDetailsAmount" size="15" type="number" class="form-control input-sm vdElement"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="">
+                        <select ng-model="VVM.EditDetail.Account.Name" id="ddAccount" class="form-control input-sm vdElement">
+                            <option ng-repeat="acct in VVM.Accounts" value="{{acct.Name}}"> {{acct.Name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea ng-model="VVM.EditDetail.Comment" class="form-control vdElement" rows="4" id="txtComment" placeholder="Comment"></textarea>
+            </div>
+        </fieldset>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿<div style="text-align: right; padding-bottom: 10px">
+    <a ng-click="newVoucher()" class="btn btn-xs btn-default">Add a Voucher</a>  
+</div>
+<div id="tblVoucher" class="tab-content">
+    <table class="table tblVoucher table-striped table-bordered table-hover">
+        <colgroup>
+            <col style="width: 10%"/>
+            <col style="width: 10%"/>
+            <col style="width: 50%"/>
+            <col style="width: 20%"/>
+            <col style="width: 10%"/>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Text</th>
+            <th>Amount</th>
+            <th>Paid</th>
+        </tr>
+        </thead>
+        <tbody id="tblVoucherBody">
+        <tr ng-repeat="voucher in vouchers" ng-click="showVoucher(voucher)">
+            <td>{{voucher.ID}}</td>
+            <td>{{voucher.Date | date:'dd.MM.yyyy'}}</td>
+            <td>{{voucher.Text}}</td>
+            <td>{{voucher.Amount | currency }}</td>
+            <td>{{voucher.Paid}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div style="padding-top: 10px">
+    <ul class="kpi">
+        <li>{{sumIncome}}</li>
+        <li>{{sumExpenses}}</li>
+    </ul>
+</div>

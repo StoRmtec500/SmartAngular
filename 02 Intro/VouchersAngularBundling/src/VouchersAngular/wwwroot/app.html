@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html ng-app="voucherApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Voucher Editor</title>
+    <!--JS-->
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/lib/bootstrap/bootstrap-datepicker.js"></script>
+    <!--Angular-->
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/angular-route/angular-route.js"></script>
+    <script src="/lib/angular-resource/angular-resource.js"></script>
+    <!-- AngularStrap-->
+    <script src="lib/angular-strap/dist/angular-strap.js"></script>
+    <script src="lib/angular-strap/dist/angular-strap.tpl.min.js"></script>
+    <!--voucherApp & Routes-->
+    <script src="app.js"></script>
+    <!--Factories & Services-->
+    <script src="/js/Services/accountsService.js"></script>
+    <script src="/js/Factories/balanceFactory.js"></script>
+    <!--Controlers-->
+    <script src="/js/Controller/homeController.js"></script>
+    <script src="/js/Controller/accountController.js"></script>
+    <script src="js/Controller/accountDetailController.js"></script>
+    <script src="/js/Controller/voucherController.js"></script>
+    <script src="/js/Controller/voucherDetailsController.js"></script>
+    <script src="/js/Controller/statisticsController.js"></script>
+    <!--UI-->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="logo">
+            </div>
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="navbar-brand" style="cursor: pointer">Voucher Editor</span>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a ng-href="#home">Home</a></li>
+                            <li><a ng-href="#vouchers">Vouchers</a></li>
+                            <li><a ng-href="#accounts">Accounts</a></li>
+                            <li><a ng-href="#statistics">Statistics</a></li>
+                            <li><a href="demos.html">Demos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="main"></div>
+        <div id="content" ng-view="">
+        </div>
+        <div id="sidebar">
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+        </div>
+    </div>
+</body>
+</html>
